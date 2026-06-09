@@ -1,65 +1,80 @@
 <div align="center">
 
-# Silvio Chessari
+# 👋 Silvio Chessari – AI Systems Engineer & LLM Researcher
 
-**AI/GPU Inference Optimization · Embedded Systems · Linux**
-
-[![GitHub followers](https://img.shields.io/github/followers/chessarisilvio?style=flat-square&color=blue)](https://github.com/chessarisilvio)
-[![Profile views](https://komarev.com/ghpvc/?username=chessarisilvio&style=flat-square&color=grey)](https://github.com/chessarisilvio)
-
-</div>
-
----
-
-## Chi sono
-
-Sviluppatore specializzato in due aree che mi appassionano:
-
-**AI/GPU Inference** — Ottimizzo l'esecuzione di modelli linguistici su hardware consumer e datacenter. Il mio setup è una **Tesla P40 (24 GB VRAM)** + **RTX 3050** su cui faccio girare LLM quantizzati in produzione. Mi occupo di speculative decoding (EAGLE, MTP), routing multi-GPU, kernel CUDA su architetture non supportate (sm_61), integrazione con llama.cpp ed ExLlamaV2, e gestione avanzata di modelli GGUF.
-
-**Embedded & Hardware** — Progetto firmware per ESP32, driver kernel Linux per periferiche (display TFT, SPI), PCB custom con KiCad e sistemi IoT con logica AI locale. Mi piace arrivare fino all'hardware.
-
----
-
-## Stack
-
-```
-AI/ML      Python · CUDA · llama.cpp · ExLlamaV2 · GGUF/EXL2 · PyTorch · EAGLE/MTP
-Backend    Node.js · FastAPI · Python · systemd
-Embedded   ESP32 · Raspberry Pi · C/C++ · ESPHome · KiCad
-Sistemi    Linux (Ubuntu) · Bash · Docker · Git
-```
-
----
-
-## Progetti principali
-
-### 🤖 AI & GPU Inference
-
-| Progetto | Descrizione |
-|----------|-------------|
-| [**gguf-model-manager-cli**](https://github.com/chessarisilvio/gguf-model-manager-cli) | CLI Python per gestire modelli GGUF: download HuggingFace con SHA256, catalogo JSON, stima VRAM, dedup |
-| [**router-cuda-exllamav2-p40**](https://github.com/chessarisilvio/router-cuda-dinamico-exllamav2-p40-rtx3050) | Intercetta i `no kernel image` su P40 (sm_61) e fallback automatico su RTX 3050 (sm_86) |
-| [**proxy-anthropic-openai**](https://github.com/chessarisilvio/proxy-anthropic-openai-con-safety-hooks) | Gateway Node.js con hook LLM configurabili (Pre-Bash, Post-Edit, Memory) per Anthropic/OpenAI |
-| [**correction-net-speculative-decoding**](https://github.com/chessarisilvio/correction-net-per-speculative-decoding) | Correction network per aumentare l'acceptance rate di EAGLE/MTP su P40 |
-| [**dashboard-telemetrica-ai**](https://github.com/chessarisilvio/dashboard-telemetrica-ai-hardware) | Dashboard real-time GPU/CPU con alert Telegram quando VRAM > 85% o temp > 75°C |
-| [**gateway-telegram-multimodale**](https://github.com/chessarisilvio/gateway-telegram-multimodale-offline) | Bot Telegram completamente offline: pipeline Whisper + Moondream per audio e immagini |
-
-### ⚡ Embedded & Hardware
-
-| Progetto | Descrizione |
-|----------|-------------|
-| [**mpi3501-kernel-6.12-driver**](https://github.com/chessarisilvio/mpi3501-kernel-6.12-driver) | Device Tree overlay per display TFT ILI9486 (MPI3501) su Raspberry Pi con kernel 6.12+ |
-| [**controller-termico-esp32**](https://github.com/chessarisilvio/controller-termico-proattivo-esp32) | Firmware ESP32 che legge la temperatura P40 via IPMI e regola proattivamente le ventole |
-| [**pcb-esp32-nrf24**](https://github.com/chessarisilvio/pcb-esp32-nrf24) | PCB custom per ESP32 + moduli NRF24L01 multipli su banda 2.4 GHz |
-| [**garden-irrigator-esp32**](https://github.com/chessarisilvio/garden-irrigator-esp32) | Sistema di irrigazione smart: ESP32 con sensori DHT22, notifiche Telegram in tempo reale |
-
----
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=dark&hide_border=true&include_all_commits=true)
-&nbsp;
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=chessarisilvio&layout=compact&theme=dark&hide_border=true&langs_count=6)
+**Deep‑learning inference specialist** – LLM scaling, speculative decoding, MoE routing, EAGLE.  
+**GPU architect** – Running 35 B‑parameter models on Pascal (Tesla P40, sm_61) via custom CUDA shims and low‑level memory tricks.  
+**Embedded & AI infra builder** – From ESP32 thermal controllers to self‑hosted AI stacks on consumer & datacenter hardware.
 
 </div>
+
+---  
+
+## Tech Stack  
+
+| Category | Tools / Frameworks |
+|----------|-------------------|
+| **Languages** | Python 3.12, C++, Rust, Bash, TypeScript |
+| **LLM Engines** | llama.cpp, llama‑server, fast‑transformers, speculative decoding, MoE routing, EAGLE |
+| **GPU / CUDA** | NVIDIA Pascal (sm_61), RTX 3050, CUDA 12.x, custom `sm_61` compatibility shim |
+| **Inference Optimizations** | MTP, speculative decoding, quantized GGUF, tensor parallelism, kernel fusion |
+| **Web / API** | Flask, FastAPI, Node.js, OpenAPI, Prometheus, Plotly |
+| **DevOps** | systemd, Docker, GitHub Actions, Terraform (infra‑as‑code) |
+| **Embedded** | ESP32‑WROOM‑32, DS18B20, MOSFET PWM, USB‑HID, FreeRTOS |
+| **Data / RAG** | ChromaDB, PDF/DOCX/XLSX ingest, Markitdown CLI |
+| **Automation** | Aider, FreeLLM API, custom Telegram bots, CI pipelines |
+
+---  
+
+## LLM Research  
+
+| Project | Description |
+|---------|-------------|
+| [LLM Research](https://github.com/chessarisilvio/llm-research) | Implements llama‑MTP, EAGLE speculative decoding, and dynamic MoE routing; benchmarks token‑per‑second across Pascal and RTX 3050 GPUs. |
+| [Speculative Decoding Suite](https://github.com/chessarisilvio/speculative-decoding-suite) | Python/C++ toolkit for on‑the‑fly speculative token prediction, reducing TTFT by up to 42 % on sm_61 hardware. |
+| [MoE Router Engine](https://github.com/chessarisilvio/moe-router-engine) | Custom TensorRT‑compatible router enabling 8‑expert MoE models on 12 GB VRAM GPUs with load‑aware scheduling. |
+| [EAGLE Inference Framework](https://github.com/chessarisilvio/eagle-framework) | End‑to‑end pipeline integrating early‑exit, adaptive‑gating, and layer‑wise quantization for 35 B models. |
+
+---  
+
+## AI Infrastructure  
+
+| Project | Description |
+|---------|-------------|
+| [AI Telemetry](https://github.com/chessarisilvio/ai-telemetry) | Flask dashboard (`:9191`) monitoring GPU temps, VRAM, fan speeds; alerts via Telegram bot. |
+| [FreeLLM API](https://github.com/chessarisilvio/freellm-api) | OpenAI‑compatible proxy aggregating 16+ free‑tier cloud providers; auto‑fallback to local 35 B P40 model. |
+| [LLM Observability](https://github.com/chessarisilvio/llm-observability) | FastAPI (`:9192`) + Plotly exposing Prometheus metrics from llama‑server instances. |
+| [Start‑Llama Launcher](https://github.com/chessarisilvio/start-llama) | CLI (`~/.local/bin/start-llama`) deploying llama‑server with five preset YAML configs for MTP, speculative, and MoE modes. |
+| [llama.cpp Benchmark Suite](https://github.com/chessarisilvio/llamacpp-benchmark-suite) | CLI suite measuring tok/s, VRAM footprint, TTFT across consumer GPUs (RTX 3050) and datacenter Pascal cards. |
+
+---  
+
+## Tools & Automation  
+
+| Project | Description |
+|---------|-------------|
+| [CUDA sm_61 Compatibility Shim](https://github.com/chessarisilvio/cuda-sm61-compatibility-shim) | Runtime shim injecting PTX kernels compiled for sm_61, enabling Pascal GPUs to run modern CUDA 12 binaries. |
+| [GGUF Model Manager](https://github.com/chessarisilvio/gguf-model-manager) | `gguf-manager` CLI for versioned model storage, automatic quantization, and hardware‑aware selection. |
+| [Markitdown](https://github.com/chessarisilvio/markitdown) | CLI ingesting PDFs/DOCX/XLSX into ChromaDB for Retrieval‑Augmented Generation pipelines. |
+| [Update GitHub Profile](https://github.com/chessarisilvio/update-github-profile) | Automated README refresh using LLM‑generated stats via `freellmapi` (`:9292`). |
+| [Aider Integration](https://github.com/chessarisilvio/aider-integration) | Wrapper enabling Aider to offload heavy prompts to the local 35 B P40 model, reducing API costs. |
+
+---  
+
+## Embedded & Hardware  
+
+| Project | Description |
+|---------|-------------|
+| [Controller Termico ESP32](https://github.com/chessarisilvio/controller-termico-esp32) | ESP32 firmware monitoring Tesla P40 temperatures via DS18B20 sensors; PWM‑driven fan control to avoid thermal throttling. |
+| [Digital Thermal LCD](https://github.com/chessarisilvio/digital-thermal-lcd) | USB‑HID driver displaying real‑time CPU/GPU temps on Thermalright ARGB LCD panel. |
+| [OpenClaw Gateway](https://github.com/chessarisilvio/openclaw) | Node.js multi‑channel AI gateway (Telegram, web) with session memory, tool‑use, and llama‑local backend. |
+| [Silvioprint Bot](https://github.com/chessarisilvio/silvioprint) | Systemd‑managed Telegram bot automating content rendering and remote printing tasks. |
+
+---  
+
+## GitHub Stats  
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=transparent" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chessarisilvio&layout=compact&theme=transparent" alt="Top Languages" />
+</p>
