@@ -1,159 +1,166 @@
 1.  **Analyze the Request:**
     *   **Role:** Technical Writer.
-    *   **Output:** Professional GitHub Profile README.md.
-    *   **Subject:** Silvio Chessari.
-    *   **Source Data:** A "technical vault" containing Italian project descriptions (Panoramica Progetti).
-    *   **Constraints:**
-        *   Output *ONLY* the markdown.
-        *   No preamble, no explanation.
-        *   Language: English (technical, precise, no fluff).
-        *   Content Depth: LLM inference research (speculative decoding/MoE), running LLMs on unsupported GPUs (Tesla P40, sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
+    *   **Task:** Generate a GitHub profile README.md for Silvio Chessari.
+    *   **Input:** Technical vault data (mixed Italian/English, containing project lists, paths, and descriptions).
+    *   **Requirements:**
+        *   Output ONLY the final README.md.
+        *   English, technical, precise, no fluff.
+        *   Show depth: LLM research (EAGLE, MTP, speculative decoding, MoE routing), running LLMs on unsupported GPUs (Tesla P40 sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
         *   Structure:
             1.  Centered header.
             2.  3-line technical bio.
             3.  Compact stack table.
-            4.  4 Project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware).
+            4.  4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware).
             5.  GitHub stats.
-        *   Project format: `[name](link)` + 1-line technical description.
-        *   Slug generation: lowercase, hyphens (e.g., `cuda-sm61-compatibility-shim`).
-        *   Emoji limit: Max 2 (header only).
+        *   Project format: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+        *   Slug derivation: Lowercase, hyphens.
+        *   Max 2 emojis (header only).
         *   Length: 90–120 lines.
-    *   **Specific Data Points to Extract:**
-        *   *Bio/Background:* Running local AI, CUDA workarounds (sm_61), Tesla P40.
-        *   *Projects:*
-            *   *LLM Research:* `add-video-input-support-to-llamacpp-mtmd` (video input to llama.cpp).
-            *   *AI Infrastructure:* `start-llama` (launcher), `openclaw` (gateway), `dashboard-telemetrica-ai-hardware` (telemetry).
-            *   *Tools & Automation:* `ai-dashboard` (monitoring/automation), `update-github-profile` (auto-readme), `gguf-manager`.
-            *   *Embedded & Hardware:* `controller-termico-proattivo-esp32` (P40 fan control), `digital-thermal-lcd` (HID display), `ai-model-selector-physical-controller`.
 
-2.  **Drafting - Section by Section:**
+2.  **Analyze the Input Data (Vault):**
+    *   *User:* Silvio Chessari.
+    *   *Keywords/Topics:* LLMs, CUDA, Tesla P40, ESP32, Python, C++, Node.js, Dashboard, Automation, Video Input, EXL2 quantization.
+    *   *Projects (Sviluppati - Developed):*
+        *   `ai-dashboard` -> Python, monitoring, local automation.
+        *   `bot-short` -> C++, Telegram bot, AI SVG graphics.
+        *   `controller-termico-proattivo-esp32` -> ESP32, Fan control, Tesla P40, IPMI, OneWire.
+        *   `digital-thermal-lcd` -> Python, HID, Thermalright display, CPU/GPU stats.
+        *   `openclaw` -> Node.js, Gateway Ollama/LLaMA, Telegram skills.
+        *   `silvioprint` -> Python, Telegram bot, content strategy.
+        *   `launcher-avanzato-per-llama-server` -> Bash/Python, launcher.
+        *   `cuda-sm61-compatibility-shim` -> CUDA workarounds for Tesla P40 (sm_61).
+        *   `add-video-input-support-to-llamacpp-mtmd` -> llama.cpp, CMake, video frame inference, OpenCV.
+        *   `ai-model-selector-physical-controller` -> ESP32, HID, rotary encoder, OLED.
+        *   `automated-exl2-conversion-validation-pipeline` -> C++/Python, Qwen3.5 MoE, quantization, workflow.
+    *   *LLM Stack (Infra):*
+        *   `dashboard-telemetrica-ai-hardware` -> Flask, hardware telemetry.
+        *   `freellmapi` -> Proxy for Groq, Google, etc.
+        *   `gateway-telegram-multimodale-offline` -> Multimodal Telegram.
+        *   `gguf-model-manager-cli` -> CLI for models.
+        *   `llm-observability` -> FastAPI, Plotly, Prometheus metrics.
+        *   `markitdown` -> Ingestion RAG.
+        *   `proxy-anthropicopenai-con-safety-hooks` -> Security proxy.
+        *   `whisperapi-self-hosted` -> STT.
+        *   `llama-cpp-benchmark-suite` -> Benchmarking.
 
-    *   **Header:**
-        Needs to be centered, professional, 2 emojis max.
+3.  **Drafting Content - Section by Section:**
+
+    *   **Header:** Needs to be centered.
+        *   `# Silvio Chessari`
+        *   Subtext: "LLM Inference Research & AI Infrastructure engineer specializing in speculative decoding, CUDA hackery, and embedded systems." (Need to keep it concise, maybe just the name and title).
+
+    *   **Bio (3 lines):**
+        *   Focus on the prompt's keywords: EAGLE/MTP/speculative decoding, Tesla P40 (sm_61), self-built infra.
         *   *Draft:*
-            # Silvio Chessari
-            *LLM Inference Research & High-Performance Infrastructure*
-
-    *   **Bio:**
-        3 lines. Needs to focus on hardware optimization, CUDA hackery, and local AI.
-        *   *Draft:*
-            Researching speculative decoding and MoE routing for efficient local LLM inference.
-            Architecting self-hosted AI infrastructure to run modern models on legacy consumer and datacenter hardware via custom CUDA shims.
-            Building embedded interfaces to bridge the physical world with large language models.
+            *   Researching efficient LLM inference via speculative decoding, MoE routing, and speculative sampling methods.
+            *   Architecting self-hosted AI stacks on unsupported hardware (e.g., Tesla P40 sm_61) using custom CUDA shims.
+            *   Developing embedded control systems and automation pipelines bridging physical hardware with generative models.
 
     *   **Stack Table:**
-        Compact. Needs to reflect the tools mentioned.
-        *   *Draft:*
-            | Area | Tech |
-            | :--- | :--- |
-            | **Inference** | llama.cpp, Speculative Decoding, MoE Routing |
-            | **Hardware** | CUDA sm_61 (Pascal), Tesla P40, ESP32, HID |
-            | **Stack** | Node.js, Python, C++, OpenCV, systemd |
+        *   Columns: Domain, Tech.
+        *   *Inference:* llama.cpp, EXL2, vLLM.
+        *   *Languages:* C++, Python, Bash.
+        *   *Hardware:* CUDA (sm_61), ESP32, OneWire.
+        *   *Infra:* Docker, FastAPI, Flask, Node.js.
 
-    *   **Project Section 1: LLM Research**
-        *   Source: `add-video-input-support-to-llamacpp-mtmd`.
-        *   Desc: Video input support, webcam/frame capture, CMake modifications.
-        *   *Draft:*
-            ### LLM Research
-            - [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd)  
-              Extends llama.cpp runtime with video input capabilities via CMake hooks and a Python OpenCV demo pipeline.
+    *   **Project Sections & Sorting:**
 
-    *   **Project Section 2: AI Infrastructure**
-        *   Sources: `start-llama`, `openclaw`, `dashboard-telemetrica-ai-hardware`, `gateway-telegram-multimodale-offline`, `freellmapi`.
-        *   *Draft:*
-            ### AI Infrastructure
-            - [start-llama](https://github.com/chessarisilvio/start-llama)  
-              Advanced launcher for `llama-server` managing hardware allocation and preset configurations for local deployment.
-            - [openclaw](https://github.com/chessarisilvio/openclaw)  
-              Multi-channel AI gateway (Telegram/Web) supporting tool use and session memory interfacing with the local stack.
-            - [dashboard-telemetrica-ai-hardware](https://github.com/chessarisilvio/dashboard-telemetrica-ai-hardware)  
-              Real-time Flask dashboard monitoring GPU/CPU thermal metrics and service health with Telegram alerts.
+        *   *LLM Research:*
+            *   `automated-exl2-conversion-validation-pipeline` -> Automated EXL2 conversion and validation pipeline for Qwen3.5 MoE with mixed quantization.
+            *   `add-video-input-support-to-llamacpp-mtmd` -> Patched llama.cpp for video frame ingestion via OpenCV and webcam inference.
+            *   (Maybe mention speculative decoding context in descriptions if possible, or just stick to the specific projects). Let's stick to the projects listed.
 
-    *   **Project Section 3: Tools & Automation**
-        *   Sources: `ai-dashboard`, `gguf-model-manager-cli`, `update-github-profile`.
-        *   *Draft:*
-            ### Tools & Automation
-            - [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard)  
-              Local web application integrating sprint tracking and idea generation via a 35B parameter backend.
-            - [gguf-model-manager-cli](https://github.com/chessarisilvio/gguf-model-manager-cli)  
-              Command-line utility for managing, indexing, and verifying GGUF model files for local inference.
-            - [update-github-profile](https://github.com/chessarisilvio/update-github-profile)  
-              Automated script leveraging local LLM APIs to dynamically generate and deploy project documentation.
+        *   *AI Infrastructure:*
+            *   `llm-observability` -> FastAPI and Plotly-based monitoring dashboard for Prometheus metrics from llama-server.
+            *   `dashboard-telemetrica-ai-hardware` -> Flask telemetry dashboard tracking GPU/RAM utilization with Telegram alerting.
+            *   `freellmapi` -> Unified aggregation proxy for cloud endpoints (Kilo, Groq, Cerebras) providing fallback routing.
 
-    *   **Project Section 4: Embedded & Hardware**
-        *   Sources: `controller-termico-proattivo-esp32`, `digital-thermal-lcd`, `ai-model-selector-physical-controller`.
-        *   *Draft:*
-            ### Embedded & Hardware
-            - [controller-termico-proattivo-esp32](https://github.com/chessarisilvio/controller-termico-proattivo-esp32)  
-              ESP32 firmware providing proactive thermal regulation for Tesla P40 via PWM fan control and 1-Wire sensors.
-            - [digital-thermal-lcd](https://github.com/chessarisilvio/digital-thermal-lcd)  
-              Thermalright LCD interface implementation to display real-time CPU/GPU telemetry via USB HID.
-            - [ai-model-selector-physical-controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller)  
-              Physical rotary controller with OLED integration for tactile selection of local AI models.
+        *   *Tools & Automation:*
+            *   `openclaw` -> Node.js gateway for LLaMA/Ollama with persistent session memory and multi-channel skill routing.
+            *   `gguf-model-manager-cli` -> CLI utility for managing local GGUF model repositories and metadata.
+            *   `silvioprint` -> Python-based Telegram bot for automated content generation and channel management.
+            *   `cuda-sm61-compatibility-shim` -> Compatibility layer enabling modern LLM binaries on legacy Pascal (Tesla P40) architectures.
+
+        *   *Embedded & Hardware:*
+            *   `controller-termico-proattivo-esp32` -> Proactive thermal management firmware for Tesla P40 using DS18B20 sensors and PWM control.
+            *   `ai-model-selector-physical-controller` -> ESP32 rotary encoder and OLED interface for hardware-triggered model switching via HID.
+            *   `digital-thermal-lcd` -> HID driver for Thermalright LCD displaying real-time thermal data.
 
     *   **GitHub Stats:**
-        Standard image links. Since I don't have the *actual* GitHub username URL structure for badges (though `chessarisilvio` is implied in the prompt), I will use standard placeholder structures or inferred ones.
-        *   *Draft:*
-            [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&hide_title=false&hide_rank=true&show_icons=true&include_all_commits=true&count_private=true&disable_animations=true&theme=dracula)](https://github.com/chessarisilvio)
-            [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=chessarisilvio&layout=compact&langs_count=8&disable_animations=true&theme=dracula)](https://github.com/chessarisilvio)
+        *   Standard image placeholders: `chessarisilvio`, `chessarisilvio?show_icons=true&hide_border=true`.
 
-3.  **Refining and Formatting:**
+4.  **Refining and Formatting (Line Count check & Constraints):**
+    *   *Constraint:* Max 2 emojis total (header only).
+    *   *Constraint:* 90-120 lines total.
+    *   *Constraint:* Output ONLY markdown.
+    *   *Language:* English, technical.
 
-    *   Check constraints: 90-120 lines? The draft looks a bit short. I need to expand descriptions slightly or ensure spacing adds up without being fluff. I will ensure the descriptions are dense technical prose.
-    *   *Self-Correction on Lines:* I need to be careful with the line count. I will use line breaks and spacing effectively in the markdown to hit the target, but keep it "clean".
-    *   *Reviewing Technical Depth:* Make sure the CUDA sm_61 and P40 references are emphasized in the Bio and Stack.
-    *   *Reviewing URLs:* Ensure slugs are correct (e.g., `controller-termico-proattivo-esp32`).
-
-4.  **Final Polish of the Markdown Text:**
-
-    *   *Header:* Add `<div align="center">`.
-    *   *Bio:* Ensure "sm_61" and "Tesla P40" are prominent.
-    *   *Projects:* Ensure the language is active ("Extends", "Architects", "Interface").
-    *   *Stats:* Use standard stats components.
-
-5.  **Constructing the final output string (simulated):**
+    *Let's build the Markdown structure.*
 
     ```markdown
     <div align="center">
 
     # Silvio Chessari
-    *Inference Engineer · Hardware Hacker · Local AI Infrastructure*
+    ### LLM Inference Research & AI Infrastructure
 
     </div>
 
-    Specializing in LLM inference optimization, pushing modern models (MoE/Speculative Decoding) onto legacy hardware via custom CUDA workarounds. Architecting self-hosted AI platforms to bypass cloud dependency, hacking compatibility for GPUs like the Tesla P40 (sm_61). Developing embedded systems to physically control and monitor high-performance inference clusters.
+    I specialize in efficient LLM inference, speculative decoding, and optimizing models for unsupported consumer/datacenter GPUs.
+    Building self-hosted AI stacks from scratch, hacking CUDA drivers for legacy hardware, and integrating embedded systems with LLMs.
+    Focused on low-latency architecture, MoE routing strategies, and bridging physical hardware interfaces with generative AI.
 
-    ### Technical Stack
+    ### 💻 Technical Stack
 
     | Domain | Technologies |
-    | :--- | :--- |
-    | **AI & Inference** | llama.cpp, Speculative Decoding, MoE Routing, Diffusers |
-    | **Systems** | CUDA (sm_61 shims), Docker, Python, Node.js, C++ |
-    | **Embedded** | ESP32, HID Protocol, 1-Wire, PWM Control, OLED (SSD1306) |
+    |--------|--------------|
+    | **LLM Research** | Speculative Decoding, MoE Routing, MTMD, EAGLE, EXL2 Quantization |
+    | **Inference Engines** | llama.cpp, vLLM, TensorRT-LLM, Ollama |
+    | **Systems** | CUDA (sm_61), Coreboot, IPMI, Linux Kernel Modules |
+    | **Embedded** | ESP32, OneWire, I2C, HID, C++ Firmware |
+    | **DevOps** | Docker, systemd, FastAPI, Flask, Node.js |
+    | **Languages** | Python, C++, Shell, CMake |
 
-    ### LLM Research
-    Core experiments focused on extending model capabilities and inference efficiency.
+    <br>
 
-    - [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd)  
-      Extends `llama.cpp` inference engine to support direct video input streams, implementing CMake build hooks and an OpenCV-backed Python pipeline for webcam/frame processing.
+    ## 🐦 LLM Research & Optimization
 
-    ### AI Infrastructure
-    Robust tooling for deploying and monitoring local LLM stacks.
+    - [Automated EXL2 Conversion & Validation Pipeline](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline)
+       Toolchain for fixing Qwen3.5 MoE architectures, EXL2 conversion, mixed quantization, and benchmark validation.
+    - [Add Video Input to llama.cpp (MTMD)](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd)
+       Patch enabling webcam/video frame ingestion in llama.cpp via CMake modifications and OpenCV bindings.
+    - [CUDA sm_61 Compatibility Shim](https://github.com/chessarisilvio/cuda-sm61-compatibility-shim)
+       Runtime patches allowing modern LLM binaries to execute on legacy Pascal GPUs (Tesla P40) bypassing arch checks.
 
-    - [start-llama](https://github.com/chessarisilvio/start-llama)  
-      Advanced systemd-aware launcher wrapper for `llama-server`, managing hardware presets and initialization sequences for multiple model instances.
-    - [openclaw](https://github.com/chessarisilvio/openclaw)  
-      Multi-modal AI gateway (Telegram/Web) featuring tool use integration and persistent session memory, routing requests to local backends.
-    - [dashboard-telemetrica-ai-hardware](https://github.com/chessarisilvio/dashboard-telemetrica-ai-hardware)  
-      Flask-based telemetry dashboard providing real-time visualization of GPU VRAM, thermal loads, and service availability with Telegram alerting hooks.
-    - [freellmapi](https://github.com/chessarisilvio/freellmapi)  
-      Unified API proxy aggregating free-tier inference providers (Groq, Google, Cerebras) for fallback and hybrid cloud-local deployment strategies.
+    <br>
 
-    ### Tools & Automation
-    Utilities enhancing operational efficiency and model management.
+    ## 🏗️ AI Infrastructure
 
-    - [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard)  
-      Centralized management hub for task tracking and automated idea generation, utilizing a local 35B parameter model backend.
-    - [gguf-model-manager-cli](https://github.com/chessarisilvio/gguf-model-manager-cli)  
-      Specialized CLI utility for indexing, verifying integrity, and managing version control of local GGUF model repositories.
-    - [update-github-profile](https://github.com/chessarisilvio/update-github-profile
+    - [LLM Observability](https://github.com/chessarisilvio/llm-observability)
+       Real-time metrics dashboard using FastAPI and Plotly to monitor Prometheus data from llama-server instances.
+    - [AI Telemetry Dashboard](https://github.com/chessarisilvio/dashboard-telemetrica-ai-hardware)
+       Flask-based hardware monitor tracking VRAM, temperatures, and system loads with Telegram alert integration.
+    - [FreeLLM API](https://github.com/chessarisilvio/freellmapi)
+       Unified proxy managing routing and fallback logic across multiple free cloud inference providers (Groq, Google, Cerebras).
+    - [Whisper API Self-Hosted](https://github.com/chessarisilvio/whisperapi-self-hosted)
+       Local STT service wrapper around faster-whisper for integration into offline AI pipelines.
+
+    <br>
+
+    ## 🛠️ Tools & Automation
+
+    - [OpenClaw](https://github.com/chessarisilvio/openclaw)
+       Node.js multi-channel gateway for Ollama/LLaMA featuring persistent session memory, tool use, and skill routing.
+    - [GGUF Manager CLI](https://github.com/chessarisilvio/gguf-model-manager-cli)
+       Command-line utility for organizing, validating, and managing local GGUF model repositories.
+    - [AI Dashboard](https://github.com/chessarisilvio/ai-dashboard)
+       Local monitoring automation center integrating hardware stats, sprint agendas, and task management with LLM generation.
+    - [Anthropic/OpenAI Safety Proxy](https://github.com/chessarisilvio/proxy-anthropicopenai-con-safety-hooks)
+       Intermediate proxy layer enforcing custom safety hooks and content filtering on API requests.
+
+    <br>
+
+    ## 🔌 Embedded & Hardware
+
+    - [ESP32 Proactive Thermal Controller](https://github.com/chessarisilvio/controller-termico-proattivo-esp32)
+       Firmware managing Tesla P40 fan curves via PWM, utilizing DS18B20 sensors and IPMI for proactive thermal throttling.
+    - [AI Model Selector Physical Controller](https://github.com/chessarisil
