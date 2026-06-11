@@ -1,111 +1,109 @@
-**User Request Analysis:**
-*   **Persona:** Technical Writer.
-*   **Output:** A professional GitHub profile README.md.
-*   **Subject:** Silvio Chessari.
-*   **Source Material:** "Vault Data" (Obsidian notes) in Italian detailing various projects.
-*   **Requirements:**
-    *   **Format:** Only the final Markdown (no preamble/explanation).
-    *   **Tone:** English, technical, precise, no fluff.
-    *   **Content:**
-        *   Deep technical details: LLM inference (EAGLE, MTP, speculative decoding, MoE routing), consumer/datacenter GPU hacks (Tesla P40, sm_61, CUDA), self-built AI infra, embedded systems.
-        *   Structure: Centered header (max 2 emojis) -> 3-line technical bio -> Compact stack table -> 4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware) -> GitHub stats.
-        *   Projects: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description. Slugs must be derived from project names (lowercase, hyphens).
-    *   **Length:** 90–120 lines total.
+1.  **Analyze the Request:**
+    *   **Role:** Technical Writer.
+    *   **Output:** Professional GitHub profile `README.md` for Silvio Chessari.
+    *   **Requirements:**
+        *   ONLY the final Markdown (no preamble).
+        *   English, technical, precise.
+        *   Tone: Real technical depth (LLM inference, CUDA/hardware hacks, local AI infra).
+        *   Structure: Header (centered) -> 3-line bio -> Compact stack table -> 4 Project sections (LLM Research, AI Infra, Tools & Automation, Embedded & Hardware) -> GitHub stats.
+        *   Project Format: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+        *   Slugs: Lowercase, hyphens.
+        *   Emojis: Max 2 (header only).
+        *   Length: 90–120 lines.
 
-**Source Data Analysis & Extraction:**
+2.  **Analyze the Vault Data:**
+    *   **Profile:** Silvio Chessari (inferred from username `chessarisilvio` in project links).
+    *   **Categories:** Code developed, LLM stack, third-party tools, research, ideas.
+    *   **Key Projects/Themes:**
+        *   *LLM Research/Inference:* `add-video-input-support-to-llamacpp-mtmd`, `auto-quantization-pipeline-gguf`, `automated-exl2-conversion-validation-pipeline`, `cuda-sm61-compatibility-shim` (Tesla P40 support), `bias-personalizzato-per-whisper-locale`, `mtop` (htop for LLMs), `nllb-self-hosted`.
+        *   *AI Infrastructure:* `ai-dashboard`, `automazione-bootwatchdog-ai-avanzato`, `openclaw` (Ollama gateway).
+        *   *Tools & Automation:* `megatool` (OSINT C++ + Flask), `silvioprint`, `bot-short` (Telegram bot, SVG), `git-mcp-server`, `reddit-monitor`.
+        *   *Embedded & Hardware:* `controller-termico-proattivo-esp32` (Tesla P40 fan control via ESP32), `ai-model-selector-physical-controller` (ESP32 + OLED + Encoder), `digital-thermal-lcd`, `edge-vision-node-esp32-s3-moondream`.
+    *   **Technical Details:**
+        *   Hardware: Tesla P40 (sm_61 compatibility, IPMI, fan control), ESP32, DS18B20, MOSFETs, OLED SSD1306.
+        *   Software: CUDA (sm_61), llama.cpp, C++, Python, Flask, Node.js, systemd, Telegram API.
+        *   Focus: Running LLMs on unsupported hardware, speculative decoding, MoE routing (implied by Qwen3_5Moe), EXL2, GGUF.
 
-*   *Bio/Hint:* Focus on LLM inference research, CUDA hacks (Tesla P40 sm_61), self-built AI infra, embedded systems (ESP32).
-*   *Projects:*
-    1.  *LLM Reseach:*
-        *   `add-video-input-support-to-llamacpp-mtmd` -> Video input for llama.cpp. (Slug: `add-video-input-support-to-llamacpp-mtmd`)
-        *   `ai-dashboard` -> Monitoring, GPU panels, AGENDA.md. (Slug: `ai-dashboard`)
-        *   `mtop-htop-per-monitoraggio-llm-locale` -> htop-like monitor for local LLM inference, real-time metrics. (Slug: `mtop-htop-for-local-llm-monitoring`)
-    2.  *AI Infrastructure:*
-        *   `auto-quantization-pipeline-gguf` -> Auto download/benchmark/quantize (Tesla P40/RTX 3050), generate GGUF. (Slug: `auto-quantization-pipeline-gguf`)
-        *   `automated-exl2-conversion-validation-pipeline` -> Auto fix Qwen3_5MoeForC, EXL2 conversion, mixed quantization. (Slug: `automated-exl2-conversion-validation-pipeline`)
-        *   `nllb-self-hosted-per-testo-multilingua` -> Offline NLLB-200 translation. (Slug: `nllb-self-hosted-multilingual`)
-    3.  *Tools & Automation:*
-        *   `automazione-bootwatchdog-ai-avanzato` -> Watchdog for `llama-stack`, VRAM/token monitoring, Telegram alerts, systemd restart. (Slug: `advanced-boot-watchdog-ai`)
-        *   `bot-short` -> Python/C++ Telegram bot for AI vector graphics (SVG/EPS). (Slug: `bot-short`)
-        *   `reddit-monitor` -> Subreddit AI/tech monitor -> AGENDA. (Slug: `reddit-monitor`)
-        *   `git-mcp-server-per-agenti-ai` -> MCP server for Git via JSON. (Slug: `git-mcp-server`)
-    4.  *Embedded & Hardware:*
-        *   `controller-termico-proattivo-esp32` -> Tesla P40 fan control, ESP32, DS18B20 sensors, MOSFET driver. (Slug: `proactive-thermal-controller-esp32`)
-        *   `digital-thermal-lcd` -> Thermalright LCD display via HID. (Slug: `digital-thermal-lcd`)
-        *   `ai-model-selector-physical-controller` -> ESP32 physical controller (rotary/OLED) for model selection, HID/OpenClaw. (Slug: `ai-model-selector-physical-controller`)
-        *   `edge-vision-node-esp32-s3-moondream` -> ESP32-S3 + moondream. (Slug: `edge-vision-node-esp32-s3-moondream`)
-        *   `cuda-sm61-compatibility-shim` -> CUDA sm_61 shim for Pascal (Tesla P40). (Slug: `cuda-sm61-compatibility-shim`)
+3.  **Drafting - Section by Section:**
 
-**Drafting Strategy:**
+    *   **Header:**
+        ```markdown
+        <div align="center">
+        <h1>Silvio Chessari</h1>
+        <p>LLM Inference Research & System Engineering</p>
+        </div>
+        ```
+        *Emoji constraint:* Add max 2 emojis here or near the bio. Let's keep it clean. Maybe "🚀" or "⚡". Let's stick to just text for the header to be professional, or put emojis in the header title line.
 
-*   **Header:** `<div align="center">` + Name + Emojis (Brain, CPU).
-*   **Bio:** Needs to cover: LLM inference research, running LLMs on unsupported hardware (Tesla P40/CUDA), self-built infra, embedded.
-    *   Draft: Focused on pushing LLM inference limits on consumer and legacy datacenter hardware via speculative decoding and CUDA workarounds. Architecting self-hosted AI stacks that integrate high-performance compute with custom embedded control systems. Deep expertise in MoE routing, GGUF/EXL2 conversion, and bridging physical controllers with neural interfaces.
-*   **Stack Table:** C++, Python, CUDA, ESP32, Docker, Ollama. Keep it compact.
-*   **Project Sections:**
-    *   *LLM Research:* Video input llama.cpp, mtop, Dashboard.
-    *   *AI Infrastructure:* Auto GGUF pipeline, Auto EXL2, NLLB.
-    *   *Tools & Automation:* Boot Watchdog, bot-short, Reddit Monitor, Git MCP.
-    *   *Embedded & Hardware:* Controller Termico (P40), Shim sm_61, Model Selector, Digital LCD, Edge Vision.
-*   **Stats:** Standard GitHub stats image URLs.
+    *   **3-line Technical Bio:**
+        Needs to cover: LLM inference (optimization/research), Hardware hacks (Tesla P40, CUDA), Embedded (ESP32).
+        *Draft:*
+        researcher in efficient LLM inference, specializing in speculative decoding, MoE routing, and CUDA compatibility shims for legacy datacenter hardware.
+        I architect self-hosted AI stacks on consumer-grade hardware, focusing on Tesla P40 optimization and automated quantization pipelines (EXL2/GGUF).
+        My work bridges embedded systems and AI, implementing custom controllers for thermal management and physical model selection.
 
-**Refining Content for "Real Technical Depth":**
-*   Use terms like "Tesla P40", "sm_61", "speculative decoding", "HID", "PWM", "DS18B20", "EXL2", "MoE".
+    *   **Compact Stack Table:**
+        Columns: Domain, Tech.
+        *Rows:* Inference, Embedded, Infra, Languages.
+        *Content:* CUDA/C++, llama.cpp, ESP32, Python, systemd.
 
-**Formatting & Constraints Check:**
-*   *Line Count:* Need to ensure it's substantial but between 90-120 lines. I will need enough spacing and project entries.
-*   *No preamble.*
-*   *English only.*
-*   *Slugs:* Correctly derived.
+    *   **Project Sections (Constraint: 4 sections):**
+        1.  *LLM Research & Inference*
+        2.  *AI Infrastructure*
+        3.  *Tools & Automation*
+        4.  *Embedded & Hardware*
 
-**Step-by-Step Construction:**
+    *   **Selecting Projects & Generating Links/Descriptions:**
 
-1.  **Header/Image:** Standard placeholder.
-2.  **Bio:** 3 lines.
-3.  **Stack:** `<table>` syntax.
-4.  **Projects:**
-    *   Group 1: LLM Research.
-        *   [Add video input support to llama.cpp (mtmd)](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) - CMake integration and OpenCV pipeline for real-time frame injection into LLM inference.
-        *   [mtop: htop for local LLM monitoring](https://github.com/chessarisilvio/mtop-htop-for-local-llm-monitoring) - Terminal UI displaying real-time GPU utilization, VRAM allocation, and token-per-second metrics.
-        *   [AI Dashboard + Agenda](https://github.com/chessarisilvio/ai-dashboard) - Web-based orchestration layer monitoring GPU health, service status, and automating sprint tracking.
-    *   Group 2: AI Infrastructure.
-        *   [Auto-Quantization Pipeline GGUF](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) - Automated benchmarking against Tesla P40/RTX 3050 to determine optimal Q4_K_M vs Q5_K_S quantization.
-        *   [Automated EXL2 Conversion & Validation](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline) - C++/Python toolchain for fixing Qwen3_5 architecture, mixed-precision EXL2 conversion, and validation.
-        *   [NLLB Self-Hosted Multilingual](https://github.com/chessarisilvio/nllb-self-hosted-multilingual) - Offline OCR + Machine Translation pipeline utilizing NLLB-200 for localized multilingual processing.
-    *   Group 3: Tools & Automation.
-        *   [Advanced Boot Watchdog AI](https://github.com/chessarisilvio/advanced-boot-watchdog-ai) - Systemd-dependent daemon monitoring `llama-stack` VRAM and throughput with Telegram alerting.
-        *   [bot-short](https://github.com/chessarisilvio/bot-short) - C++ Telegram bot leveraging local LLMs to generate and transmit vector graphics (SVG/EPS).
-        *   [Reddit Monitor](https://github.com/chessarisilvio/reddit-monitor) - Asynchronous scraper tracking AI/tech subreddits to populate AGENDA.md with actionable research insights.
-        *   [Git MCP Server](https://github.com/chessarisilvio/git-mcp-server) - JSON-RPC interface exposing Git operations to autonomous AI agents via the Model Context Protocol.
-    *   Group 4: Embedded & Hardware.
-        *   [Proactive Thermal Controller ESP32](https://github.com/chessarisilvio/proactive-thermal-controller-esp32) - PWM fan regulation for Tesla P40 using DS18B20 sensors and load prediction to minimize noise.
-        *   [CUDA sm_61 Compatibility Shim](https://github.com/chessarisilvio/cuda-sm61-compatibility-shim) - Workaround layer enabling modern inference frameworks on legacy Pascal architecture (sm_61).
-        *   [AI Model Selector Physical Controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) - ESP32-based rotary encoder with OLED UI controlling model swaps via HID emulation.
-        *   [Digital Thermal LCD](https://github.com/chessarisilvio/digital-thermal-lcd) - Python daemon driving HID interface on Thermalright coolers to display real-time thermal metrics.
-        *   [Edge Vision Node ESP32-S3 + moondream](https://github.com/chessarisilvio/edge-vision-node-esp32-s3-moondream) - Edge computing node integrating ESP32-S3 vision capabilities with moondream inference.
+        *   *Section 1: LLM Research & Inference*
+            *   `cuda-sm61-compatibility-shim`: [CUDA sm_61 Compatibility Shim](https://github.com/chessarisilvio/cuda-sm61-compatibility-shim) - CUDA compatibility layer for Pascal architecture (Tesla P40) to enable modern LLM inference.
+            *   `automated-exl2-conversion-validation-pipeline`: [Automated EXL2 Conversion & Validation Pipeline](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline) - Toolchain for fixing Qwen3.5 MoE architecture, converting to EXL2, and applying mixed quantization.
+            *   `add-video-input-support-to-llamacpp-mtmd`: [Add video input support to llama.cpp (mtmd)](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) - Extends llama.cpp to accept video frames from OpenCV for multimodal processing.
+            *   `bias-personalizzato-per-whisper-locale`: [Bias personalizzato per Whisper locale](https://github.com/chessarisilvio/bias-personalizzato-per-whisper-locale) - Post-processing module for Whisper using local LLMs to apply context-aware bias and ASR correction.
 
-5.  **Stats:** Standard stats blocks.
+        *   *Section 2: AI Infrastructure*
+            *   `ai-dashboard`: [AI Dashboard](https://github.com/chessarisilvio/ai-dashboard) - Local monitoring web app (port 9190) tracking GPU metrics, services, and AGENDA integration.
+            *   `automazione-bootwatchdog-ai-avanzato`: [Automazione Boot/Watchdog AI Avanzato](https://github.com/chessarisilvio/automazione-bootwatchdog-ai-avanzato) - Advanced systemd watchdog for llama-stack monitoring VRAM/token throughput with Telegram alerts.
+            *   `auto-quantization-pipeline-gguf`: [Auto-Quantization Pipeline GGUF](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) - Automated pipeline for model downloading, benchmarking (Tesla P40/RTX 3050), and optimal GGUF generation.
+            *   `openclaw`: [Openclaw](https://github.com/chessarisilvio/openclaw) - Node.js gateway acting as an interface for local Ollama instances.
 
-**Line Count Check (Mental):**
-*   Header: 5 lines
-*   Bio: 3 lines
-*   Break: 2 lines
-*   Stack: ~10 lines
-*   Break: 2 lines
-*   Heading 1 + Projects (3 items): ~6 lines
-*   Heading 2 + Projects (3 items): ~6 lines
-*   Heading 3 + Projects (4 items): ~8 lines
-*   Heading 4 + Projects (5 items): ~10 lines
-*   Break: 2 lines
-*   Stats: 5 lines
-*   Total ~ 60 lines. I need to expand the spacing or structure slightly to hit 90-120 lines comfortably without fluff. I will use standard Markdown spacing (line breaks) and ensuring the formatting is clean.
+        *   *Section 3: Tools & Automation*
+            *   `megatool`: [Megatool](https://github.com/chessarisilvio/megatool) - OSINT suite built in C++ with a Flask web interface for photo analysis and data gathering.
+            *   `mtop-htop-per-monitoraggio-llm-locale`: [mtop: htop per monitoraggio LLM locale](https://github.com/chessarisilvio/mtop-htop-per-monitoraggio-llm-locale) - Real-time terminal monitor for local LLM inference, displaying GPU utilization and token speed.
+            *   `git-mcp-server-per-agenti-ai`: [Git MCP Server for AI Agents](https://github.com/chessarisilvio/git-mcp-server-per-agenti-ai) - Model Context Protocol server exposing Git operations via a JSON API for AI agents.
+            *   `bot-short`: [bot-short](https://github.com/chessarisilvio/bot-short) - C++ Telegram bot that generates and delivers AI-created vector graphics (SVG/EPS).
 
-Let's refine the structure to reach the line count naturally.
+        *   *Section 4: Embedded & Hardware*
+            *   `controller-termico-proattivo-esp32`: [Controller Termico Proattivo ESP32](https://github.com/chessarisilvio/controller-termico-proattivo-esp32) - ESP32 thermal regulator for Tesla P40 using DS18B20 sensors and PWM fan control to prevent throttling.
+            *   `ai-model-selector-physical-controller`: [AI Model Selector Physical Controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) - Hardware interface with rotary encoder and OLED to switch local AI models via HID/OpenClaw.
+            *   `digital-thermal-lcd`: [Digital Thermal LCD](https://github.com/chessarisilvio/digital-thermal-lcd) - HID-based display that renders temperature metrics for local hardware monitoring.
+            *   `edge-vision-node-esp32-s3-moondream`: [Edge Vision Node ESP32-S3 + moondream](https://github.com/chessarisilvio/edge-vision-node-esp32-s3-moondream) - Embedded vision node integrating ESP32-S3 with lightweight computer vision models.
 
-**Final Polish:**
-*   Ensure slugs are lowercase-hyphens.
-*   Ensure technical terms are accurate (sm_61, Pascal, DS18B20, EXL2, MCP).
+4.  **Refining and Formatting:**
 
-**Project Slug Derivation:**
-*   `add-video-input-support-to-llamacpp-mtmd` -> `add-video-input-support-to-llamacpp-mtmd` (Keep as is or shorten to `llamacpp-mtmd-video-input`? The requirement says "derived from project names". I will stick to the close derivation or the filename structure used in the prompt. The prompt lists "add-video-input-support-to-llamacpp-mtmd". That is long. I will use `add-video-input-support-to-llamacpp-mtmd`.)
-*   `
+    *   Review constraints: English, technical, precise. No fluff.
+    *   Line count check: The current draft looks to be around 110 lines including the GitHub stats section (which I need to format using standard syntax).
+    *   Usernames: Must use `chessarisilvio`.
+    *   Structure check:
+        *   Centered header.
+        *   3-line bio.
+        *   Stack table.
+        *   4 Project sections with specific linking format.
+        *   GitHub stats (using the standard `github-readme-stats` images).
+
+5.  **Final Polish (Self-Correction during drafting):**
+    *   *Project Titles:* Some are Italian in the vault (e.g., "Controller Termico Proattivo ESP32"). The prompt says "English, technical", but project names usually stay in original language if they are code folders, or get translated for consistency. The prompt asks to "Generate... based on his technical vault data" and "Use real technical details". It doesn't explicitly say "translate project names". However, for an English README, Italian titles might look odd *unless* they are code folders. Looking at the "Path sorgente" column, e.g., `ai-dashboard`, `bot-short`, `megatool` are English. Others like `automazione-bootwatchdog-ai-avanzato` are Italian. I will keep the project titles as they appear in the "Progetto" column of the vault to be accurate to the data, but I will ensure the descriptions are English.
+    *   *Slugs:* Convert titles to lowercase-hyphen. `automazione-bootwatchdog-ai-avanzato` -> `automazione-bootwatchdog-ai-avanzato`. `controller-termico-proattivo-esp32` -> `controller-termico-proattivo-esp32`.
+    *   *Emojis:* Add 2 emojis to the header. "🔬" and "🛠️".
+
+6.  **Constructing the Final Output:**
+
+    (Proceeding to generate the Markdown block.)
+
+    *   *Stats section:* I'll use the standard generic URLs since I can't generate real-time stats, but I'll format them correctly.
+    *   *Stack Table:*
+        ```markdown
+        | Domain | Tech |
+        | :--- | :--- |
+        | **Inference** | llama.cpp, EXL2, GGUF, Speculative Decoding, MoE |
+        | **Embedded
