@@ -1,128 +1,139 @@
 1.  **Analyze the Request:**
-    *   **Role:** Technical Writer.
-    *   **Target:** Professional GitHub Profile README.md for Silvio Chessari.
-    *   **Input:** Technical Vault Data (Obsidian notes format in Italian).
-    *   **Requirements:**
-        *   Output ONLY final README.md markdown.
-        *   No preamble, no explanation.
-        *   Language: English, technical, precise, no fluff.
-        *   Content emphasis: LLM inference research (EAGLE/MTP/speculative decoding/MoE routing), unsupported GPUs (Tesla P40, sm_61 workarounds), AI infra, embedded systems.
-        *   Structure: Centered header -> 3-line bio -> Compact stack table -> 4 project sections (LLM Research, AI Infrastructure, Tools & Automation, Embedded & Hardware) -> GitHub stats.
-        *   Project format: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
-        *   Slug derivation: lowercase, hyphens.
-        *   Emojis: Max 2 total in header only.
-        *   Length: 90–120 lines.
+    *   **Role:** Technical writer.
+    *   **Output:** A professional GitHub profile `README.md`.
+    *   **Subject:** Silvio Chessari.
+    *   **Source Material:** A "technical vault" containing project data, goals, and architectures.
+    *   **Constraint Checklist & Confidence Score:**
+        1.  Output ONLY the final README.md? Yes.
+        2.  No preamble, no explanation? Yes.
+        3.  English, technical, precise, no fluff? Yes.
+        4.  Show real technical depth (Inference, CUDA/GPU hacks, Infra, Embedded)? Yes.
+        5.  Use real technical details from data? Yes.
+        6.  Structure (Header -> Bio -> Stack -> 4 Projects sections -> Stats)? Yes.
+        7.  Project format `[name](link)` + 1-liner? Yes.
+        8.  Repo slugs derived from names? Yes.
+        9.  Max 2 emojis (header only)? Yes.
+        10. 90-120 lines total? Yes.
+    *   **Confidence Score:** 5/5.
 
-2.  **Analyze the Vault Data (Source Material extraction):**
-    *   *Bio/Context:* Focus on LLM stack, research, GPU compatibility, embedded systems.
-    *   *Projects:*
-        *   `ai-dashboard`: Python, web framework, AGENDA.md, worker tasks.
-        *   `bot-short`: C++ Telegram bot, AI vector graphics, SVG pipeline.
-        *   `controller-termico-proattivo-esp32`: ESP32 fan control, PID logic, Tesla P40 cooling, 1-Wire sensors.
-        *   `digital-thermal-lcd`: LCD temp display via HID.
-        *   `megatool`: OSINT C++, Flask web app `:7788`, AI photo analysis.
-        *   `openclaw`: Ollama Gateway, Node.js.
-        *   `reddit-monitor`: Python, subreddit AI/tech scraping -> AGENDA.md.
-        *   `automazione-bootwatchdog-ai-avanzato`: `llama-stack` watchdog, systemd, Telegram, VRAM/tokens monitoring.
-        *   `launcher-avanzato-per-llama-server`: Advanced launcher (Idea).
-        *   `cuda-sm61-compatibility-shim`: CUDA sm_61 compatibility for Pascal (Tesla P40).
-        *   `add-video-input-support-to-llamacpp-mtmd`: Video input for llama.cpp, CMake changes, Python OpenCV demo.
-        *   `ai-model-selector-physical-controller`: ESP32 rotary encoder, HID/HTTP, model switching.
-        *   `automated-exl2-conversion-validation-pipeline`: C++ core, Python CLI, Qwen3.5 MoE fix, EXL2 quantization.
-        *   `auto-quantization-pipeline-gguf`: Automated GGUF quantization, benchmark on P40/RTX3050.
-        *   `nllb-self-hosted-per-testo-multilingua`: NLLB-200 offline translation, OCR+MT pipeline.
-        *   `mtop-htop-per-monitoraggio-llm-locale`: htop-like for local LLM, real-time tokens/GPU metrics.
-        *   `git-mcp-server-per-agenti-ai`: MCP server for Git operations.
-        *   `open-source-mcp-bridge-for-local-claude-code`: HTTP/MCP bridge for Claude Code.
-        *   `bias-personalizzato-per-whisper-locale`: Whisper bias logic, JSON/TSV bias, correction GGUF.
+2.  **Process the Vault Data (Extraction & Synthesis):**
 
-3.  **Structure and Draft Strategy:**
+    *   *Bio & Focus:*
+        *   LLM Inference research: EAGLE/MTP/speculative decoding/MoE routing (derived from "mtmd" and "EXL2" and general research notes, though specific mentions of EAGLE/MTP are in the *prompt instructions*, I need to integrate them with the vault's theme of inference optimization). The vault mentions "llama.cpp", "EXL2", "Qwen3_5Moe".
+        *   Hardware Hacks: Tesla P40 (sm_61), CUDA compatibility shims, fan control.
+        *   Stack: C++, Python, ESP32, Node.js (Ollama Gateway), systemd, Hid.
 
-    *   **Header:** Name + Title (LLM Research & Infrastructure Engineer). Emojis: ⚡🔧 (Max 2).
-    *   **Bio:**
-        1.  Specialist in local LLM inference acceleration and speculative decoding.
-        2.  Architecting self-hosted AI stacks on heterogeneous consumer and datacenter hardware.
-        3.  Deep expertise in CUDA optimization, embedded systems integration, and automation.
-    *   **Stack Table:** Python, C++, CMake, CUDA, ESP32, Docker, Node.js.
-    *   **Project Sections & Classification:**
-        *   *LLM Research:* add-video-input, automated-exl2, auto-quantization, bias-whisper.
-        *   *AI Infrastructure:* ai-dashboard, open-source-mcp-bridge, git-mcp-server, mtop, watchdog.
-        *   *Tools & Automation:* bot-short, megatool, reddit-monitor, openclaw.
-        *   *Embedded & Hardware:* controller-termico, ai-model-selector, digital-thermal-lcd, cuda-sm61.
+    *   *Project Selection & Categorization:*
+        *   **Category 1: LLM Research & Optimization**
+            *   *add-video-input-support-to-llamacpp-mtmd*: Adding video input to llama.cpp.
+            *   *automated-exl2-conversion-validation-pipeline*: EXL2 quantization for Qwen3_5Moe.
+            *   *auto-quantization-pipeline-gguf*: Automated quantization pipeline.
+            *   *bias-personalizzato-per-whisper-locale*: Whisper bias correction.
+        *   **Category 2: AI Infrastructure**
+            *   *ai-dashboard*: Local monitoring, agenda generation.
+            *   *automazione-bootwatchdog-ai-avanzato*: Systemd watchdog, VRAM/token monitoring.
+            *   *git-mcp-server-per-agenti-ai*: MCP server for AI agents.
+            *   *mtop-htop-per-monitoraggio-llm-locale*: Top-like tool for LLM metrics.
+        *   **Category 3: Tools & Automation**
+            *   *bot-short*: C++ Telegram bot, SVG generation.
+            *   *reddit-monitor*: Subreddit monitoring.
+            *   *silvioprint*: Content bot.
+            *   *nllb-self-hosted-per-testo-multilingua*: Offline translation.
+        *   **Category 4: Embedded & Hardware**
+            *   *controller-termico-proattivo-esp32*: Tesla P40 fan control, DS18B20 sensors.
+            *   *ai-model-selector-physical-controller*: ESP32, rotary encoder, OLED.
+            *   *digital-thermal-lcd*: LCD temp display via HID.
+            *   *cuda-sm61-compatibility-shim*: Pascal GPU compatibility.
 
-4.  **Refining Content & Slugs:**
+3.  **Drafting the Content (Iterative refinement for tone and constraints):**
 
-    *   *LLM Research:*
-        *   `add-video-input-support-to-llamacpp-mtmd` -> `add-video-input-support-to-llamacpp` (too long? keep it or shorten). Let's use `llamacpp-video-input` for the slug, but the prompt says "derived from project names (lowercase, hyphens)". The project name in vault is "add-video-input-support-to-llamacpp-mtmd". That's a very long slug. I will follow the instruction: "repo slugs derived from project names". I'll try to make them GitHub-friendly versions of the Italian names if those are the project names, or the English ones where available. The vault has a mix. The Italian titles are headers.
-        *   *Correction:* The prompt says "Use repo slugs derived from project names".
-        *   `Add video input support to llama.cpp (mtmd)` -> `add-video-input-support-to-llamacpp-mtmd` (This is long, but precise to the instruction).
-        *   `Automated EXL2 Conversion & Validation Pipeline` -> `automated-exl2-conversion-validation-pipeline`.
-        *   `Auto-Quantization Pipeline GGUF` -> `auto-quantization-pipeline-gguf`.
-        *   `Bias personalizzato per Whisper locale` -> `bias-personalizzato-per-whisper-locale` (or maybe `custom-whisper-bias-pipeline`? Prompt says derived from project names. I will stick to the English equivalent if the project is clearly English, or transliterate Italian to English slug format if the project title is the unique identifier. Looking at the vault, titles are mixed. "Bias personalizzato per Whisper locale" is a title. Let's assume a standardized slug: `custom-whisper-bias-module`. Actually, the prompt asks to "Show real technical depth". I will map the Italian titles to reasonable English GitHub slugs that describe them, as GitHub repos usually don't have Italian slugs for a tech profile unless requested. However, the instruction is strict: "derived from project names (lowercase, hyphens)".
-        *   Let's look at the `Progetto` column or the H1 headers.
-        *   Item: "Bias personalizzato per Whisper locale". Slug: `bias-personalizzato-per-whisper-locale`. (A bit ugly, but follows rules).
-        *   Item: "Add video input support to llama.cpp (mtmd)". Slug: `add-video-input-support-to-llamacpp-mtmd`.
-        *   Let's try to clean them up slightly to look "professional" while respecting the name.
-        *   Re-reading: "derived from project names". I will use the English headers where possible, otherwise translate the Italian header to an English slug because a GitHub URL `github.com/user/bias-personalizzato-per-whisper-locale` is unusual for a tech demo context, though possible. Given the user is Italian ("Silvio Chessari"), maybe he wants Italian slugs. But the README requirement is "English, technical". I will convert the specific Italian titles to English slugs for professionalism, as that fits the "English, technical" requirement better.
-        *   Let's standardize:
-            *   `add-video-input-support-to-llamacpp-mtmd` -> `llamacpp-video-input-extension`
-            *   `automated-exl2-conversion-validation-pipeline` -> `exl2-conversion-validation-pipeline`
-            *   `bias-personalizzato-per-whisper-locale` -> `custom-whisper-bias-pipeline`
-            *   `auto-quantization-pipeline-gguf` -> `gguf-quantization-pipeline`
+    *   *Header:*
+        ```markdown
+        <div align="center">
+          <h1>Silvio Chessari</h1>
+          <p>LLM Inference Research & Local AI Infrastructure</p>
+        </div>
+        ```
 
-    *   *AI Infrastructure:*
-        *   `AI Dashboard` -> `ai-dashboard` (Path: `ai-dashboard.py`). Slug: `ai-dashboard`.
-        *   `Open-source MCP bridge for local Claude Code` -> `claude-code-mcp-bridge`.
-        *   `Git MCP Server for AI Agents` -> `git-mcp-server`.
-        *   `mtop: htop per monitoraggio LLM locale` -> `mtop-llm-monitor`.
-        *   `Automazione Boot/Watchdog AI Avanzato` -> `llama-stack-watchdog`.
+    *   *Bio:* Needs to be 3 lines.
+        *   Focused on speculative decoding, MoE routing, and hardware optimization.
+        *   Specifics: sm_61 (Pascal), Tesla P40, consumer GPUs.
+        *   Keywords: CUDA, C++, Python, Embedded.
 
-    *   *Tools & Automation:*
-        *   `bot-short` -> `bot-short`.
-        *   `Megatool` -> `megatool`.
-        *   `Reddit Monitor` -> `reddit-monitor`.
-        *   `Openclaw` -> `openclaw`.
+    *   *Stack Table:*
+        *   Languages: C++, Python, CMake.
+        *   Infra: Docker/Containerization (implied by "Hub"), Systemd, Node.js.
+        *   AI/ML: llama.cpp, EXL2, GGUF, Ollama, ComfyUI.
+        *   Hardware: ESP32, Tesla P40, NVIDIA CUDA.
 
-    *   *Embedded & Hardware:*
-        *   `Controller Termico ESP32` -> `tesla-p40-esp32-controller`.
-        *   `AI Model Selector Physical Controller` -> `physical-ai-model-selector`.
-        *   `Digital thermal LCD` -> `digital-thermal-lcd`.
-        *   `CUDA sm61 Compatibility Shim` -> `cuda-sm61-compatibility-shim`.
+    *   *Project Sections (generating slugs and descriptions):*
 
-5.  **Drafting the Content (Mental Sandbox):**
+        *   *LLM Research:*
+            1.  `add-video-input-support-to-llamacpp-mtmd` -> `add-video-input-support-to-llamacpp-mtmd`. Desc: Extended llama.cpp with video input capabilities using CMake modifications, OpenCV stubs, and Python inference scripts.
+            2.  `automated-exl2-conversion-validation-pipeline` -> `automated-exl2-conversion-validation-pipeline`. Desc: C++ and Python toolchain for fixing Qwen3_5Moe architectures, mixed-precision EXL2 quantization, and benchmarking.
+            3.  `bias-personalizzato-per-whisper-locale` -> `bias-personalizzato-per-whisper-locale`. Desc: Custom bias module for Whisper using JSON/TSV definitions plus LLM-based contextual correction.
 
-    *   *Bio:*
-        Silvio Chessari
-        LLM Inference Research & Infrastructure
-        ...
-    *   *Stack:*
-        C++, Python, CUDA, CMake, ESP32, Docker, Node.js, Linux Kernel.
-    *   *Sections:*
-        1.  **LLM Research:**
-            *   [add-video-input...](...)
-            *   [automated-exl2...](...)
-            *   [gguf-quant...](...)
-            *   [whisper-bias...](...)
-        2.  **AI Infrastructure:**
-            *   [ai-dashboard](...)
-            *   [claude-mcp-bridge](...)
-            *   [mtop](...)
-            *   [watchdog](...)
-        3.  **Tools & Automation:**
-            *   [bot-short](...)
-            *   [megatool](...)
-            *   [reddit-monitor](...)
-            *   [openclaw](...)
-        4.  **Embedded & Hardware:**
-            *   [tesla-fan-controller](...)
-            *   [model-selector](...)
-            *   [thermal-lcd](...)
-            *   [cuda-shim](...)
+        *   *AI Infrastructure:*
+            1.  `ai-dashboard` -> `ai-dashboard`. Desc: Local monitoring stack via Flask (:9190) tracking GPU metrics, systemd services, and auto-generating daily agendas using local 35B models.
+            2.  `automazione-bootwatchdog-ai-avanzato` -> `automazione-bootwatchdog-ai-avanzato`. Desc: Advanced systemd watchdog monitoring VRAM and token-throughput with automated Telegram alerts and process recovery.
+            3.  `mtop-htop-per-monitoraggio-llm-locale` -> `mtop-htop-per-monitoraggio-llm-locale`. Desc: htop-like terminal utility for real-time monitoring of local LLM inference metrics, GPU load, and token generation speed.
+            4.  `git-mcp-server-per-agenti-ai` -> `git-mcp-server-per-agenti-ai`. Desc: MCP server exposing Git operations via JSON API to enable autonomous version control for local AI agents.
 
-6.  **Refining the Descriptions (1-line technical):**
-    *   *Video input:* Extends llama.cpp for video inference via CMake modifications and OpenCV-based frame injection.
-    *   *EXL2:* Python/C++ toolchain to fix Qwen3.5 MoE architectures and automate EXL2 quantization with validation.
-    *   *GGUF:* Automated pipeline to benchmark and convert LLM checkpoints to optimized GGUF on Tesla P40/RTX 3050.
-    *   *Whisper:* Custom bias module for local Whisper using JSON/TSV definitions and LLM-based contextual correction.
-    *   *AI Dashboard:* Local web stack monitoring GPU, services, and generating ideas via 35B models.
-    *   *MCP Bridge:* Open-source HTTP
+        *   *Tools:*
+            1.  `bot-short` -> `bot-short`. Desc: High-performance C++ Telegram bot generating AI vector graphics in SVG/EPS format.
+            2.  `nllb-self-hosted-per-testo-multilingua` -> `nllb-self-hosted-per-testo-multilingua`. Desc: Local offline translation pipeline integrating NLLB-200 with OCR for multilingual text processing.
+
+        *   *Embedded:*
+            1.  `controller-termico-proattivo-esp32` -> `controller-termico-proattivo-esp32`. Desc: ESP32 fan controller for Tesla P40 utilizing DS18B20 sensors and PWM MOSFET drivers to prevent thermal throttling.
+            2.  `ai-model-selector-physical-controller` -> `ai-model-selector-physical-controller`. Desc: Physical interface with rotary encoder and OLED for selecting local AI models via HID keyboard emulation.
+            3.  `cuda-sm61-compatibility-shim` -> `cuda-sm61-compatibility-shim`. Desc: Compatibility layer enabling modern LLM inference stacks on legacy Pascal (sm_61) GPUs like the Tesla P40.
+
+    *   *Stats:* Standard GitHub stats image or code.
+
+4.  **Review against Constraints:**
+    *   *Length Check:* 90-120 lines.
+    *   *Emojis:* Only in header (or none in header, but "Max 2 emojis total (header only)". I will put them there).
+    *   *Fluff:* Stripped out. "Desc: Extended llama.cpp..." is clean.
+    *   *Links:* `https://github.com/chessarisilvio/slug`.
+
+5.  **Final Polish (Self-Correction during drafting):**
+    *   Ensure the slugs are standard (lowercase, hyphens).
+    *   The prompt mentions "Show real technical depth: LLM inference research (EAGLE/MTP/speculative decoding/MoE routing)". I should weave these into the bio or project descriptions even if the vault doesn't explicitly title the project "EAGLE", because the context is high-level inference optimization. I'll add this to the bio to meet the specific requirement "Show real technical depth".
+    *   Bio Line 1: Focus on high-level inference research (EAGLE/MTP/speculative decoding).
+    *   Bio Line 2: Focus on the hardware hacking (P40/sm_61).
+    *   Bio Line 3: Focus on the infrastructure/automation.
+
+6.  **Constructing the Markdown:** (Drafting the actual file content).
+
+    *   *Header:* Silvio Chessari, Researcher & Engineer.
+    *   *Bio:* Researching LLM inference acceleration via speculative decoding (EAGLE/MTP), MoE routing, and custom quantization. Specialist in running modern AI stacks on legacy data-center hardware (Tesla P40/sm_61) through CUDA workarounds and custom firmware. Architect of self-hosted, event-driven AI infrastructure integrating embedded systems, daemon orchestration, and real-time telemetry.
+    *   *Table:* Columns: Domain, Tech.
+    *   *Projects:* Grouped as requested.
+
+7.  **Final Word Count/Line Count Estimate:**
+    *   Header: ~5 lines.
+    *   Bio: ~4 lines.
+    *   Table: ~5 lines.
+    *   Dividers: ~5 lines.
+    *   Projects (approx 10 items): ~20 lines.
+    *   Stats: ~3 lines.
+    *   Whitespace/Formatting: ~40 lines.
+    *   Total ~80-90 lines. I will adjust spacing and ensure the table is compact to hit the 90-120 range. I'll add a slightly more detailed "Tech Stack" section or ensure the descriptions are rich. actually, the requirement says "compact stack table". I will stick to compact. The project descriptions might be slightly beefier to fill space if needed, but the limit is strict. Let's ensure the bio is formatted as exactly 3 lines.
+
+    *   Let's count lines carefully.
+    *   Intro: 5 lines.
+    *   Bio: 3 lines.
+    *   Table: ~6 lines.
+    *   Section Headers: 4 lines.
+    *   Project Items: ~12 items * 2 lines = 24 lines.
+    *   Stats: 4 lines.
+    *   Total non-whitespace: ~46 lines.
+    *   Spacing between sections: ~4 lines.
+    *   I will expand the descriptions slightly to ensure technical depth and length compliance without fluff. e.g. "Exposing Git operations via JSON API to enable autonomous version control for Claude Code and local agents."
+
+8.  **Output Generation:** (Proceed to generate). No preamble.
+
+    *   *Slug check:* `auto-quantization-pipeline-gguf`, `add-video-input-support-to-llamacpp-mtmd`, `automated-exl2-conversion-validation-pipeline`... looks correct based on the "slug derived from project names" rule.
+
+    *   *Bio Refinement:*
+        Researching LLM inference acceleration via speculative decoding (EAGLE/M
