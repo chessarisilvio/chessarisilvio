@@ -1,153 +1,156 @@
 1.  **Analyze the Request:**
     *   **Role:** Technical Writer.
-    *   **User:** Silvio Chessari.
-    *   **Task:** Generate a professional GitHub `README.md` based on provided vault data.
-    *   **Constraints:**
-        *   Output ONLY the final markdown (no preamble, no explanation).
-        *   Language: English, technical, precise (no fluff).
-        *   Content Focus: LLM inference research (EAGLE, MTP, speculative decoding, MoE routing), running LLMs on unsupported GPUs (Tesla P40 sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
-        *   Structure:
-            1.  Centered header.
-            2.  3-line technical bio.
-            3.  Compact stack table.
-            4.  4 project sections (LLM Research, AI Infrastructure, Tools & Automation, Embedded & Hardware).
-            5.  GitHub stats (image).
-        *   Project format: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description. Slug must be lowercase hyphens.
+    *   **Subject:** Silvio Chessari (GitHub profile README).
+    *   **Source Material:** "Vault data" (Obsidian-style markdown notes about projects, research, and infrastructure).
+    *   **Tone:** English, technical, precise, professional, no fluff.
+    *   **Structure Requirements:**
+        *   Centered header.
+        *   3-line technical bio.
+        *   Compact stack table.
+        *   4 Project sections: LLM Research, AI Infrastructure, Tools & Automation, Embedded & Hardware.
+        *   GitHub stats (visual).
+        *   Project format: `[Name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+        *   Slugs: lowercase, hyphens.
         *   Emojis: Max 2 total (header only).
-        *   Length: 90–120 lines.
+        *   Length: 90-120 lines.
+    *   **Specific Content to Highlight (from Vault):**
+        *   LLM Inference Research: EAGLE, MTP, speculative decoding, MoE routing.
+        *   Running LLMs on unsupported GPUs: Tesla P40 (sm_61), CUDA workarounds.
+        *   AI Infrastructure: Self-built.
+        *   Embedded Systems: Arduino, ESP32, MQTT, HID.
 
-2.  **Analyze the Vault Data:**
-    *   *User Info:* Silvio Chessari.
-    *   *Themes:* Local LLM inference, CUDA workarounds (sm_61), GGUF, EXL2, automation (Benchmarking, Watchdogs), embedded (Arduino R4, ESP32), C++/Python.
-    *   *Specific Projects:*
-        *   `Sistema di Benchmarking Automatizzato per Nuovi Modelli GGUF`: Benchmarking GGUF (P40/RTX3050), auto reports.
-        *   `AI Home Assistant HID Dashboard`: Arduino R4 WiFi, ESP32, MQTT/Tailscale for local AI monitoring.
-        *   `AI Dashboard`: Python script `:9190`, worker sub-tasks, GPU/Service monitoring.
-        *   `Secure LLM Context Vault`: Secure context storage.
-        *   `bot-short`: C++ Telegram bot, AI vector graphics (SVG).
-        *   `Controller Termico ESP32`: Fan control + sensors.
-        *   `Megatool`: C++ OSINT + Flask web app + AI photo analysis.
-        *   `VideoStudio`: Python backend, Spot AI from photos (LLM storyboard + Higgsfield clips).
-        *   `Openclaw`: Node.js Ollama gateway.
-        *   `Reddit Monitor`: Subreddit AI/tech scraping → AGENDA.md.
-        *   `Silvioprint`: Telegram content bot.
-        *   `Silvioprint — Sito Web`: Static HTML/CSS/JS e-commerce.
-        *   `Automazione Boot/Watchdog AI Avanzato`: Watchdog for llama-stack, VRAM/tok/s monitoring, Telegram notifications, systemd.
-        *   `cuda-sm61-compatibility-shim`: CUDA sm_61 shim for Pascal (Tesla P40).
-        *   `add-video-input-support-to-llamacpp-mtmd`: Video input for llama.cpp, OpenCV.
-        *   `AI Model Selector Physical Controller`: ESP32, rotary encoder, OLED, HID interface.
-        *   `Automated EXL2 Conversion & Validation Pipeline`: C++ core, Python CLI, Qwen3_5MoeForC fix, mixed precision quantization.
-        *   `NLLB Self-Hosted`: Offline NLLB-200 translation.
+2.  **Process the Vault Data (Extraction & Categorization):**
 
-3.  **Drafting - Section by Section:**
+    *   *LLM Research & Modifiers:*
+        *   `add-video-input-support-to-llamacpp-mtmd`: Video input patches for llama.cpp (C++/Python).
+        *   `nex2-mini-phase-twin-30b-lowvram-gguf-model`: Low-VRAM GGUF model optimization.
+        *   `auto-quantization-pipeline-gguf`: Automated benchmarking/quantization on P40/RTX3050.
+        *   `automated-exl2-conversion-validation-pipeline`: EXL2 conversion, Qwen3.5 MoE fix, mixed quantization.
+        *   `bias-personalizzato-per-whisper-locale`: Contextual bias/post-correction for Whisper.
 
-    *   **Header:** `<br><div align="center"> <h1 align="center">Silvio Chessari</h1> ... </div>`
-    *   **Bio:** Focus on LLM inference research (EAGLE, MoE), CUDA optimization on legacy hardware (sm_61), and embedded AI integration.
-    *   **Stack Table:** Needs to cover Python, C++, CUDA, Arduino/ESP32, Linux/Shell, GGUF/EXL2.
+    *   *AI Infrastructure:*
+        *   `ai-dashboard`: Web dashboard (9190) for GPU/services/agenda.
+        *   `automazione-bootwatchdog-ai-avanzato`: Systemd watchdog for llama-stack, Telegram alerts.
+        *   `secure-llm-context-vault`: Secure context storage.
+        *   `openclaw`: Ollama gateway (Node.js).
+        *   `launcher-avanzato-per-llama-server`: Advanced server launcher.
 
-    *   **Section 1: LLM Research & Optimization**
-        *   *Project Ideas:* Video input support, EXL2 pipeline, CUDA shim, Quantization pipeline.
-        *   *Selection:*
-            1.  `Add Video Input Support to llama.cpp` (mtmd) -> `add-video-input-support-to-llamacpp-mtmd`
-            2.  `Automated EXL2 Conversion & Validation Pipeline` -> `automated-exl2-conversion-validation-pipeline`
-            3.  `Auto-Quantization Pipeline GGUF` -> `auto-quantization-pipeline-gguf`
-            4.  `CUDA sm_61 Compatibility Shim` -> `cuda-sm61-compatibility-shim`
-    
-    *   **Section 2: AI Infrastructure**
-        *   *Project Ideas:* AI Dashboard, Openclaw, Watchdog.
-        *   *Selection:*
-            1.  `AI Dashboard` -> `ai-dashboard`
-            2.  `Automazione Boot/Watchdog AI Avanzato` -> `automazione-bootwatchdog-ai-avanzato`
-            3.  `Openclaw` -> `openclaw`
-            4.  `Secure LLM Context Vault` -> `secure-llm-context-vault`
+    *   *Tools & Automation:*
+        *   `megatool`: OSINT C++ + Flask web app + AI photo analysis.
+        *   `bot-short`: C++ Telegram bot, SVG/EPS graphics generation via AI.
+        *   `reddit-monitor`: Subreddit AI scraper for ideas/agenda.
+        *   `silvioprint`: Telegram content bot service.
+        *   `silvioprint-sito-web`: Static HTML/CSS/JS e-commerce.
 
-    *   **Section 3: Tools & Automation**
-        *   *Project Ideas:* Megatool, Reddit Monitor, Silvioprint, VideoStudio.
-        *   *Selection:*
-            1.  `Megatool` -> `megatool`
-            2.  `VideoStudio` -> `videostudio`
-            3.  `Reddit Monitor` -> `reddit-monitor`
-            4.  `bot-short` -> `bot-short` (Fits here as a tool)
+    *   *Embedded & Hardware:*
+        *   `ai-home-assistant-hid-dashboard`: Arduino R4 WiFi + LCD + MQTT/Tailscale + ESP32 audio.
+        *   `controller-termico-proattivo-esp32`: ESP32 proactive fan control + sensors.
+        *   `digital-thermal-lcd`: HID temperature display (Thermalright).
+        *   `ai-model-selector-physical-controller`: ESP32 rotary controller + OLED + HID for model selection.
+        *   `cuda-sm61-compatibility-shim`: CUDA sm_61 shim for legacy P40 support.
 
-    *   **Section 4: Embedded & Hardware**
-        *   *Project Ideas:* HID Dashboard, AI Model Selector, ESP32 Thermal Controller.
-        *   *Selection:*
-            1.  `AI Home Assistant HID Dashboard` -> `ai-home-assistant-hid-dashboard`
-            2.  `AI Model Selector Physical Controller` -> `ai-model-selector-physical-controller`
-            3.  `Controller Termico ESP32` -> `controller-termico-proattivo-esp32`
+3.  **Drafting Content - Section by Section:**
 
-    *   **GitHub Stats:** Standard visitor count image.
+    *   **Header:**
+        *   `# Silvio Chessari`
+        *   Emojis: 🔬 ⚡
+    *   **Bio:**
+        *   Focus on specific tech: LLM inference optimization, CUDA hacking (sm_61), speculative decoding, MoE routing, local AI infrastructure, embedded hardware integration.
+        *   *Drafting:* Specialized in LLM inference acceleration and speculative decoding techniques (EAGLE/MTP) on consumer and legacy datacenter hardware. Engineer building autonomous local AI infrastructure, featuring automated benchmarking pipelines and CUDA compatibility shims for Tesla P40 (sm_61) GPUs. Integrates embedded systems (Arduino/ESP32) with backend services for physical control of AI workloads and thermal management.
+    *   **Stack Table:**
+        *   Columns: Core, Inference, Hardware, Automation.
+        *   *Drafting:*
+            *   Core: C++, Python, Node.js, CUDA
+            *   Inference: llama.cpp, Ollama, ExLlamaV2, GGUF
+            *   Hardware: Tesla P40, RTX 3050,Arduino R4, ESP32
+            *   Automation: Systemd, Docker, Telegram API, MQTT
+    *   **Projects - Section 1: LLM Research & Optimization**
+        *   *Select:* `nex2-mini-phase-twin-30b-lowvram-gguf-model`, `add-video-input-support-to-llamacpp-mtmd`, `automated-exl2-conversion-validation-pipeline`, `bias-personalizzato-per-whisper-locale`.
+    *   **Projects - Section 2: AI Infrastructure**
+        *   *Select:* `automazione-bootwatchdog-ai-avanzato`, `cuda-sm61-compatibility-shim`, `ai-dashboard`, `auto-quantization-pipeline-gguf`.
+    *   **Projects - Section 3: Tools & Automation**
+        *   *Select:* `bot-short`, `megatool`, `reddit-monitor`, `openclaw`.
+    *   **Projects - Section 4: Embedded & Hardware**
+        *   *Select:* `ai-home-assistant-hid-dashboard`, `ai-model-selector-physical-controller`, `controller-termico-proattivo-esp32`, `digital-thermal-lcd`.
+    *   **GitHub Stats:**
+        *   Standard `github-readme-stats` or `anuraghazra` cards.
 
-4.  **Refining the Content (Technical Tone & Constraints):**
-    *   *Bio Check:* Needs to mention EAGLE/MTP/Speculative decoding/MoE routing explicitly as per requirements ("Show real technical depth..."). Even though specific files for EAGLE/MTP aren't in the detailed project list, the prompt explicitly asks the writer to *include* these depth areas. I will integrate them into the bio and imply them in the descriptions where appropriate (e.g., the EXL2 pipeline fixing MoE architectures).
-    *   *Slugs:* Ensure lowercase-hyphenate.
-    *   *Descriptions:* One liners, technical.
+4.  **Refining and Formatting (Checking Constraints):**
 
-    *   *Drafting Bio:*
-        Focused on LLM inference efficiency through speculative decoding (EAGLE/MTP) and routing optimization. Specialist in running large models on consumer/legacy hardware (CUDA sm_61, Tesla P40) via custom shims and quantization pipelines. Bridges high-performance AI research with embedded systems and physical interfaces.
+    *   *Slugs:* Ensure they are lowercase and hyphens (e.g., `add-video-input-support-to-llamacpp-mtmd`).
+    *   *Line Count:* Need to aim for 90-120 lines. I need to ensure the descriptions are concise but the list is substantial.
+    *   *Tone Check:* "English, technical, precise — no fluff."
+    *   *Specific Tech Check:* Mentions of sm_61, CUDA, EAGLE, MoE, Tesla P40, RTX 3050.
 
-    *   *Drafting Descriptions:*
-        *   `add-video-input...`: Extends llama.cpp for multimodal video inference via OpenCV frame injection and CMake integration.
-        *   `automated-exl2...`: C++/Python toolchain for Qwen3.5 MoE architecture fixing, mixed-precision EXL2 quantization, and validation.
-        *   `cuda-sm61...`: Compatibility layer enabling modern CUDA workloads on Pascal architecture (Tesla P40 sm_61).
-        *   `ai-dashboard`: Local monitoring stack tracking GPU VRAM, token throughput, and systemd services via Python web server.
-        *   `automazione-bootwatchdog...`: Systemd watchdog monitoring llama-stack health, VRAM leaks, and inference rates with Telegram alerts.
+5.  **Drafting the Markdown (Mental or Scratchpad):**
 
-5.  **Format Check & Length Estimation:**
-    *   90–120 lines.
-    *   No emojis in body.
-    *   Proper Markdown structure.
+    *   *Bio Refinement:*
+        Focus on LLM inference acceleration (EAGLE/MTP) and MoE routing on heterogeneous hardware (Tesla P40 sm_61/RTX 3050). Architect of self-hosted AI stacks using CUDA workarounds for legacy GPUs and automated quantization pipelines (GGUF/EXL2).
+        (Too long? Let's trim).
+        *Final Bio:*
+        Researcher focusing on LLM inference acceleration via speculative decoding (EAGLE/MTP) and MoE routing optimization on heterogeneous hardware. Architect of self-hosted AI infrastructure, featuring CUDA compatibility shims for unsupported GPUs (sm_61) and automated quantization pipelines for low-VRAM environments. Integrates embedded microcontrollers (ESP32/Arduino) for physical control and thermal management of distributed compute nodes.
 
-6.  **Final Polish (Self-Correction during drafting):**
-    *   *Prompt Requirement:* "Show real technical depth: LLM inference research (EAGLE/MTP/speculative decoding/MoE routing)" -> I will put this in the bio explicitly.
-    *   *Prompt Requirement:* "Running LLMs on unsupported consumer/datacenter GPUs (Tesla P40 sm_61, CUDA workarounds)" -> Bio and Shim project description.
-    *   *Repo URL:* `https://github.com/chessarisilvio/slug`.
+    *   *Formatting Links:*
+        https://github.com/chessarisilvio/nex2-mini-phase-twin-30b-lowvram-gguf-model
+        https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd
+        etc.
 
-7.  **Constructing the Final Output (Mental Simulation):**
+6.  **Final Code Assembly (Simulated):**
 
+    *   Header
+    *   Bio
+    *   Tech Stack
+    *   Headers for 4 sections
+    *   Lists of links + desc
+    *   Stats
+
+    *Self-Correction during assembly:* The prompt asks for "Max 2 emojis total (header only)". I need to remove emojis from the project sections or the bio.
+
+    *Reviewing Slugs:*
+    - `nex2-mini-phase-twin-30b-lowvram-gguf-model`
+    - `add-video-input-support-to-llamacpp-mtmd`
+    - `automated-exl2-conversion-validation-pipeline`
+    - `bias-personalizzato-per-whisper-locale`
+    - `automazione-bootwatchdog-ai-avanzato`
+    - `cuda-sm61-compatibility-shim`
+    - `ai-dashboard`
+    - `auto-quantization-pipeline-gguf`
+    - `bot-short`
+    - `megatool`
+    - `reddit-monitor`
+    - `openclaw`
+    - `ai-home-assistant-hid-dashboard`
+    - `ai-model-selector-physical-controller`
+    - `controller-termico-proattivo-esp32`
+    - `digital-thermal-lcd`
+
+    *Reviewing Descriptions:* Needs to be punchy.
+    - `nex2...`: Optimized 30B parameter model with phase-twin architecture for low-VRAM GGUF inference.
+    - `add-video...`: CMake patch and Python/C++ stubs enabling raw video frame ingestion into llama.cpp backends.
+    - `automated-exl2...`: C++/Python pipeline to fix Qwen3.5 MoE architectures and generate mixed-precision EXL2 checkpoints.
+
+7.  **Final Polish:** Ensure line counts look right. The stack table takes up space, the project lists take up space.
+
+    *Text for "Stack":*
     ```markdown
-    <br>
-    <div align="center">...</div>
-
-    Technical specialist focused on LLM inference efficiency via EAGLE/MTP speculative decoding and MoE routing strategies. Expert in deploying large models on legacy hardware (Tesla P40 sm_61) through CUDA workarounds and custom quantization pipelines. Architect of self-hosted AI infrastructure and embedded control systems.
-
-    ### Tech Stack
-    | Category | Technologies |
-    | ...
+    ### Technical Skills
+    | Architecture | Inference | Hardware | Automation |
+    | :--- | :--- | :--- | :--- |
+    | **C++, Python, CUDA** | **llama.cpp, ExLlamaV2** | **Tesla P40 (sm_61), RTX 3050** | **Systemd, Docker, Tailscale** |
+    | Node.js, Bash | GGUF, EXL2 | Arduino R4, ESP32 | MQTT, Telegram API |
     ```
 
-    *Filling the sections...*
+    *Text for Stats:*
+    ```markdown
+    ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&hide_border=true&rank_icon=github)
+    ```
 
-    *LLM Research*
-    - [Add Video Support...](...) Extends llama.cpp...
-    - [Automated EXL2...](...) C++/Python toolchain...
+8.  **Final Output Generation** (Proceeding to generate the markdown block).
 
-    *AI Infrastructure*
-    - [AI Dashboard](...) Python-based...
-    - [Openclaw](...) Node.js gateway...
+    *Check:* Did I include *real technical depth*? Yes (sm_61, EAGLE, MTP, MoE).
+    *Check:* Is it English? Yes.
+    *Check:* Is it only the markdown? Yes.
 
-    *Tools & Automation*
-    - [Megatool](...) C++ OSINT...
-    - [Bot Short](...) C++ Telegram...
+    (Self-Correction on Slugs based on "real technical details from the vault"): The vault path uses underscores `add-video-input-support-to-llamacpp-mtmd`, the user prompt says "use repo slugs derived from project names (lowercase, hyphens)". I will adhere to the prompt's instruction for the GitHub slug format (lowercase, hyphens) but keep the name recognizable. E.g., `ai-home-assistant-hid-dashboard`.
 
-    *Embedded & Hardware*
-    - [AI Home Assistant...](...) Arduino R4...
-    - [AI Model Selector](...) ESP32...
-
-    *Stats*
-
-8.  **Final Line Count Check:**
-    Header: ~10 lines.
-    Bio: ~4 lines.
-    Stack: ~7 lines.
-    Sections: ~4 headers + 3 projects *4 sections = 12 projects + spacing ~30-40 lines.
-    Stats: ~5 lines.
-    Total ~60-70 lines. I need to ensure it hits the requested 90-120 lines. To achieve this, I will expand the descriptions slightly within the constraints (1 line technically, but maybe slightly longer or break lines logically) or add spacing, but the prompt says "1-line technical description". To reach 90 lines, I might need to ensure the markdown formatting (tables, spacing) is verbose enough, or perhaps the header and stack sections take up more vertical space. Actually, standard markdown spacing often consumes lines. I will ensure the descriptions are dense and precise.
-
-    *Re-evaluating Line Count Strategy:*
-    If I strictly follow "1-line technical description", I might fall short of lines. However, "1-line" usually means a single sentence or sentence fragment,未必 a physical line if using code blocks or tables. I will focus on the *density* of information. The prompt asks for 90-120 lines. Let's make the stack table detailed and the layout airy but dense in content.
-
-    *Wait*, re-reading: "For each project... + 1-line technical description".
-    If I have 12 projects, that's 12 lines. 4 headers = 4 lines. 3 bio lines = 3 lines. Header = 5 lines. Stack = 5 lines.
-    That's ~30 lines of content. How to get to 90-120?
-    Maybe the user means the *file
+    Let's double check the line count target. 16 projects x ~2 lines = 32 lines. Bio = 5 lines. Stack = 4 lines. Headers = 4 lines. Preamble/Stats = 10 lines. Total ~55. I need to expand descriptions slightly or ensure spacing is correct to
