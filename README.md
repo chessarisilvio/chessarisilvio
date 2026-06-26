@@ -1,47 +1,77 @@
 <h1 align="center">Silvio Chessari</h1>
+<h3 align="center">LLM inference researcher · self-hosted AI infrastructure · embedded systems</h3>
+
+Local-first LLM inference on unsupported GPUs (Tesla P40 / RTX 3050), speculative decoding, MoE routing, embedded AI dashboards, and full-stack automation.
+
+<table>
+<tr>
+<td width="50%">
+
+**Languages**
+Python · Bash · C/C++ · CUDA · JavaScript · HTML/CSS
+
+**Inference Stack**
+llama.cpp · ExLlamaV2 · Ollama · Custom speculative decoding (EAGLE/MTP)
+
+**Quantization**
+GGUF · Q4_K_M · Q5_K_S · Mixed-precision EXL2
+
+**Hardware**
+NVIDIA Tesla P40 (sm_61) · RTX 3050 (8 GB) · Arduino R4 · ESP32
+
+</td>
+<td width="50%">
+
+**Infra**
+systemd · Docker · Tailscale · MQTT · Node.js · Flask
+
+**DevOps**
+GitHub Actions · systemd timers · watchdog CI · Bash orchestration
+
+**Tools**
+OpenClaw gateway · Whisper · Obsidian vault-driven automation · agent wrappers
+
+**Embedded**
+HID · OLED/SSD1306 · EXIF/GPS extraction · thermal ESP32 controllers
+
+</td>
+</tr>
+</table>
+
+## 🔬 LLM Research
+
+- [benchmark-4-agent-wrappers-on-qwen3627b-llamacpp](https://github.com/chessarisilvio/benchmark-4-agent-wrappers-on-qwen3627b-llamacpp) — comparative benchmark of four agent wrappers on Qwen3.6-27B via llama.cpp  
+- [automated-exl2-conversion-validation-pipeline](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline) — automated Qwen3_5MoeForC architecture fix → EXL2 conversion, mixed quantization, and benchmark validation  
+- [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) — video input support for llama.cpp (mtmd): webcam/file frame acquisition for LLM inference  
+- [nex2-mini-phase-twin-30b-lowvram-gguf-model](https://github.com/chessarisilvio/nex2-mini-phase-twin-30b-lowvram-gguf-model) — 30B parameter GGUF model quantized for low-VRAM local inference  
+- [secure-llm-context-vault](https://github.com/chessarisilvio/secure-llm-context-vault) — encrypted archive for storing and retrieving LLM conversation contexts  
+
+## 🖥️ AI Infrastructure
+
+- [ai-gateway-in-prod-alternative-concrete-a-litellm](https://github.com/chessarisilvio/ai-gateway-in-prod-alternative-concrete-a-litellm) — evaluation of 10 concrete alternatives to LiteLLM for consumer GPU routing on P40 + RTX 3050 (20 GB RAM)  
+- [openclaw](https://github.com/chessarisilvio/openclaw) — self-hosted Ollama gateway (Node.js) with model routing for local inference  
+- [auto-quantization-pipeline-gguf](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) — automated download → benchmark → GGUF quantization (Q4_K_M / Q5_K_S) on P40/3050 hardware  
+- [sistema-di-benchmarking-automatizzato-per-nuovi-mo](https://github.com/chessarisilvio/sistema-di-benchmarking-automatizzato-per-nuovi-mo) — automated GGUF model benchmarking on P40 and RTX 3050 with auto-generated reports  
+- [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard) — local web dashboard (:9190) for GPU monitoring, AGENDA.md, worker subtask tracking, unified security scanning  
+
+## ⚙️ Tools & Automation
+
+- [voice-dictate](https://github.com/chessarisilvio/voice-dictate) — push-to-talk Whisper turbo GPU dictation for Claude Code supporting Italian language transcription  
+- [automazione-bootwatchdog-ai-avanzato](https://github.com/chessarisilvio/automazione-bootwatchdog-ai-avanzato) — advanced llama-stack watchdog: process health, VRAM monitoring, token-rate anomaly detection, Telegram alerting, systemd auto-restart  
+- [automazione-systemd-timer-per-html-minification-gi](https://github.com/chessarisilvio/automazione-systemd-timer-per-html-minification-gi) — systemd-driven HTML minification pipeline with automated GitHub Pages deployment  
+
+## 🔌 Embedded & Hardware
+
+- [ai-home-assistant-hid-dashboard](https://github.com/chessarisilvio/ai-home-assistant-hid-dashboard) — Arduino R4 WiFi + ESP32 hardware dashboard displaying P40/3050 stats (VRAM, tok/s, uptime) with local voice commands via MQTT/Tailscale  
+- [ai-model-selector-physical-controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) — ESP32 rotary-encoder + OLED controller for hardware selection of local AI models via HID commands  
+- [controller-termico-proattivo-esp32](https://github.com/chessarisilvio/controller-termico-proattivo-esp32) — proactive ESP32 thermal management: predictive fan control + temperature sensor array  
+- [digital-thermal-lcd](https://github.com/chessarisilvio/digital-thermal-lcd) — ThermalRight LCD temperature display interfaced via HID protocol  
+
+<br clear="both" align="center"/>
+
+---
+
 <p align="center">
-  AI infrastructure engineer & LLM systems researcher. Building local inference stacks on consumer/datacenter GPUs, embedded hardware, and automated pipelines.
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=transparent&hide_title=true&count_private=true"/>
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=chessarisilvio&layout=compact&theme=transparent&hide_title=true"/>
 </p>
-
-## 🛠️ Stack
-
-| Domain | Technologies |
-|---|---|
-| **LLM Inference** | llama.cpp, GGUF, EXL2, speculative decoding, MTP, MoE routing, Ollama |
-| **GPU Compute** | Tesla P40 (sm_61), RTX 3050 (sm_86), CUDA workarounds, VRAM-constrained optimization |
-| **Languages** | Python, C/C++, Bash, JavaScript |
-| **Infra & Ops** | systemd, Docker, Tailscale, MQTT, Node.js, Flask, GitHub Pages CI |
-| **Embedded** | ESP32, Arduino R4 WiFi, HID, OLED (SSD1306), MQTT |
-| **Tools** | Whisper turbo, Qwen, LiteLLM alternatives, llama-stack, voice coding |
-
-## 📁 Projects
-
-### LLM Research
-
-- [auto-quantization-pipeline-gguf](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) — Automated pipeline: download LLM checkpoints → benchmark on P40/3050 → select best GGUF quant point (Q4_K_M / Q5_K_S) → produce production-ready GGUF + Obsidian docs.
-- [automated-exl2-conversion-validation-pipeline](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline) — Toolchain fixing Qwen3_5MoeForC arch → automated EXL2 conversion → mixed quantization → benchmark validation via C++ core + Python CLI wrapper.
-- [benchmark-4-agent-wrappers-on-qwen3627b-llamacpp](https://github.com/chessarisilvio/benchmark-4-agent-wrappers-on-qwen3627b-llamacpp) — Comparative benchmark of 4 agent wrappers running Qwen3.6-27B on llama.cpp.
-- [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) — Video input support for llama.cpp (mtmd): CMake option `LLAMA_VIDEO_INPUT`, webcam/frame capture stubs, Python example script.
-- [secure-llm-context-vault](https://github.com/chessarisilvio/secure-llm-context-vault) — Encrypted archive for LLM conversation contexts; secure retrieval and storage.
-- [nex2-mini-phase-twin-30b-lowvram-gguf-model](https://github.com/chessarisilvio/nex2-mini-phase-twin-30b-lowvram-gguf-model) — Low-VRAM 30B parameter GGUF model optimized for 24GB/8GB deployments.
-
-### AI Infrastructure
-
-- [ai-gateway-in-prod-alternative-concrete-a-litellm](https://github.com/chessarisilvio/ai-gateway-in-prod-alternative-concrete-a-litellm) — Production AI gateway for consumer GPUs: analyzed 10 LiteLLM alternatives; prompt/response caching, multi-model routing, OpenAI-compatible API, Docker deploy on P40+3050.
-- [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard) — Local monitoring dashboard (`:9190`): GPU stats, services, system health, sprint board, unified security scan, personal AI ideas pipeline.
-- [automazione-bootwatchdog-ai-avanzato](https://github.com/chessarisilvio/automazione-bootwatchdog-ai-avanzato) — Advanced watchdog for llama-stack: process/VRAM/tps monitoring, Telegram anomaly alerts, systemd auto-restart.
-
-### Tools & Automation
-
-- [voice-dictate](https://github.com/chessarisilvio/voice-dictate) — Hold Space in Claude Code → local Whisper turbo GPU transcription, replacing built-in voice mode for improved Italian accuracy.
-- [reddit-monitor](https://github.com/chessarisilvio/reddit-monitor) — Subreddit monitor (AI/tech) → auto-populates AGENDA.md with trending ideas on a 3h timer.
-- [openclaw](https://github.com/chessarisilvio/openclaw) — Ollama API gateway in Node.js for local LLM orchestration.
-- [megatool](https://github.com/chessarisilvio/megatool) — OSINT suite in C++ with Flask web app (`:7788`) and AI photo analysis.
-- [modulo-offline-exifgps-geotagging-per-megatool](https://github.com/chessarisilvio/modulo-offline-exifgps-geotagging-per-megatool) — Offline EXIF/GPS extraction + reverse geocoding with local geographic databases.
-
-### Embedded & Hardware
-
-- [ai-home-assistant-hid-dashboard](https://github.com/chessarisilvio/ai-home-assistant-hid-dashboard) — Physical dashboard: Arduino R4 WiFi + LCD showing P40/3050 status (VRAM, tok/s, uptime), ESP32 voice commands via MQTT/Tailscale.
-- [controller-termico-proattivo-esp32](https://github.com/chessarisilvio/controller-termico-proattivo-esp32) — Proactive thermal controller on ESP32: sensor-driven fan curve logic with predictive adjustments.
-- [digital-thermal-lcd](https://github.com/chessarisilvio/digital-thermal-lcd) — Thermalright temperature LCD display via HID interface.
-- [ai-model-selector-physical-controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) — ESP32 physical model selector: rotary encoder + OLED SSD1306 + HID commands to switch local AI models.
