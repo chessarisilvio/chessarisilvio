@@ -1,168 +1,70 @@
-1.  **Analyze the Request:**
-    *   **Role:** Technical Writer.
-    *   **Task:** Generate a professional GitHub profile README.md for "Silvio Chessari".
-    *   **Source Material:** "Technical vault data" provided (Obsidian/Markdown format).
-    *   **Requirements:**
-        *   ONLY the final README.md markdown (no preamble, no explanation).
-        *   English, technical, precise, no fluff.
-        *   Show real technical depth: LLM inference research (EAGLE/MTP/speculative decoding/MoE routing), running LLMs on unsupported consumer/datacenter GPUs (Tesla P40 sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
-        *   Use real technical details from the vault.
-        *   Structure:
-            1.  Centered header.
-            2.  3-line technical bio.
-            3.  Compact stack table.
-            4.  4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware).
-            5.  GitHub stats.
-        *   Project format: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
-        *   Repo slugs: Derived from names (lowercase, hyphens).
-        *   Max 2 emojis total (header only).
-        *   90–120 lines total.
+<h1 align="center">Silvio Chessari</h1>
 
-2.  **Analyze the Source Data (Vault):**
-    *   *Identity:* Silvio Chessari.
-    *   *Hardware:* Tesla P40 (sm_61), RTX 3050, ESP32, Arduino R4 WiFi.
-    *   *Key Themes:* LLM inference optimization, CUDA, GGUF quantization, local AI infrastructure, embedded systems (HID, IoT), automation (systemd, Python hooks).
-    *   *Specific Projects to Include:*
-        *   *Sistema di Benchmarking Automatizzato* (GGUF benchmarks on P40/RTX3050).
-        *   *Nex2 Mini Phase Twin 30B* (Low-VRAM GGUF model).
-        *   *Benchmark 4 agent wrappers on Qwen* (llama.cpp).
-        *   *AI Dashboard* (Web dashboard, GPU monitoring).
-        *   *AI Home Assistant HID Dashboard* (Arduino R4, MQTT/Tailscale).
-        *   *Voice Dictate* (Whisper turbo for Claude Code).
-        *   *Auto Vault Journal* (Automated Obsidian workflow).
-        *   *DFlash* (Optimized attention kernel for P40).
-        *   *Megatool* (OSINT C++, Flask).
-        *   *Modulo Offline EXIF/GPS* (Offline reverse geocoding).
-        *   *VideoStudio* (Storyboard LLM).
-        *   *Openclaw* (Ollama gateway Node.js).
-        *   *Add video input support to llama.cpp*.
-        *   *Auto-Quantization Pipeline*.
+<p align="center">
+  LLM inference researcher · Self-built AI infrastructure · Embedded systems
+</p>
 
-3.  **Drafting - Section by Section:**
+<p align="center">
+  Running speculative decoding research on unsupported GPUs. Building local AI stacks from scratch. Bridging embedded hardware with LLM pipelines.
+</p>
 
-    *   **Header:** Needs to be centered. Name. emojis max 2.
-        *   *Draft:*
-            <h1 align="center">Silvio Chessari ⚙️ 🔬</h1>
-            (Wait, maybe just the name and a subtitle. Let's stick to standard GitHub headers).
+---
 
-    *   **Bio (3 lines):** Focus on LLM research, CUDA/unsupported GPUs, and embedded AI.
-        *   *Draft:*
-            Specializing in LLM inference optimization and speculative decoding, pushing large models on legacy hardware like the Tesla P40 (sm_61).
-            Building end-to-end local AI infrastructure, from automated GGUF quantization pipelines to CUDA kernel tweaks.
-            bridging high-performance compute with embedded systems via MQTT, HID, and custom firmware on ESP32 and STM32 platforms.
+## Stack
 
-    *   **Stack Table:** Compact. HTML table.
-        *   *Columns:* Category, Tech.
-        *   *Content:*
-            *   Compute: CUDA 12+, Tesla P40, RTX 3050
-            *   Inference: llama.cpp, EXL2, GGUF, MoE
-            *   Embedded: ESP32, Arduino R4, MQTT, Tailscale
-            *   Automation: Python, Bash, Systemd, Docker
+| Domain | Technologies |
+|---|---|
+| LLM Inference | llama.cpp, GGUF quantization, speculative decoding, EAGLE/MTP, MoE routing, EXL2 |
+| GPU Compute | NVIDIA Tesla P40 (sm_61, 24GB VRAM), RTX 3050 (8GB VRAM), CUDA workarounds for unsupported architectures |
+| AI Infrastructure | Ollama, LiteLLM alternatives, custom gateways, prompt/response caching, multi-model routing |
+| Embedded | ESP32, Arduino R4 WiFi, HID devices, MQTT, Tailscale, OLED/LCD displays |
+| Automation | systemd timers, bash pipelines, Python orchestration, Telegram notifications |
+| Languages | C++, Python, Bash, CMake |
 
-    *   **Project Sections:**
+---
 
-        *   *Section 1: LLM Research*
-            *   *Nex2 Mini Phase Twin* -> `nex2-mini-phase-twin-30b-lowvram-gguf-model`
-            *   *DFlash* -> `dflash-kernel-attention-ottimizzato-per-p40-in-lla`
-            *   *Benchmark 4 agents* -> `benchmark-4-agent-wrappers-on-qwen3627b-llamacpp`
-            *   *Add video input* -> `add-video-input-support-to-llamacpp-mtmd`
+## LLM Research
 
-        *   *Section 2: AI Infrastructure*
-            *   *AI Dashboard* -> `ai-dashboard`
-            *   *AI Home Assistant* -> `ai-home-assistant-hid-dashboard`
-            *   *Auto-Quantization* -> `auto-quantization-pipeline-gguf`
-            *   *Openclaw* -> `openclaw`
+- [dflash-kernel-attention-p40-llamacpp](https://github.com/chessarisilvio/dflash-kernel-attention-p40-llamacpp) — Custom attention kernel optimized for Tesla P40 (sm_61) inside llama.cpp, bypassing CUDA compute capability limitations
+- [benchmark-4-agent-wrappers-qwen3627b-llamacpp](https://github.com/chessarisilvio/benchmark-4-agent-wrappers-qwen3627b-llamacpp) — Comparative benchmark of four agent wrappers on Qwen3.6-27B via llama.cpp
+- [automated-exl2-conversion-validation-pipeline](https://github.com/chessarisilvio/automated-exl2-conversion-validation-pipeline) — Automated EXL2 conversion with Qwen3_5MoeForC architecture fix, mixed quantization, and validation benchmarks
+- [auto-quantization-pipeline-gguf](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) — Automated GGUF quantization pipeline: download checkpoints, benchmark Q4_K_M vs Q5_K_S on P40/3050, select optimal quantization
+- [benchmarking-automatizzato-gguf](https://github.com/chessarisilvio/benchmarking-automatizzato-gguf) — Automated GGUF benchmarking on P40 and RTX 3050 with automatic report generation
+- [nex2-mini-phase-twin-30b-lowvram-gguf](https://github.com/chessarisilvio/nex2-mini-phase-twin-30b-lowvram-gguf) — Low-VRAM GGUF model optimized for 24GB consumer/datacenter GPUs
+- [add-video-input-support-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-llamacpp-mtmd) — Video input support for llama.cpp via mtmd: webcam/file frame acquisition for multimodal inference
+- [ai-gateway-prod-alternative-litellm](https://github.com/chessarisilvio/ai-gateway-prod-alternative-litellm) — Analysis of concrete LiteLLM alternatives for local AI gateways on consumer NVIDIA hardware
 
-        *   *Section 3: Tools & Automation*
-            *   *Auto Vault Journal* -> `auto-vault-journal`
-            *   *Voice Dictate* -> `voice-dictate`
-            *   *Megatool* -> `megatool`
-            *   *Modulo Offline EXIF* -> `modulo-offline-exifgps-geotagging-per-megatool`
+## AI Infrastructure
 
-        *   *Section 4: Embedded & Hardware*
-            *   *Controller Termico* -> `controller-termico-proattivo-esp32`
-            *   *Thermalright LCD* -> `digital-thermal-lcd`
-            *   *AI Model Selector* -> `ai-model-selector-physical-controller` (This is listed as an idea/proposal, but the vault says "Idee non ancora implementate". I should check if I should include it. The prompt asks for "derived from project names". "Sviluppati" implies developed. "Idee" are not yet developed. I will stick to "Sviluppati" and "Ricerca" to be safe and accurate. "Controller Termico" and "Thermalright LCD" are in "Sviluppati".)
+- [openclaw](https://github.com/chessarisilvio/openclaw) — Ollama gateway with Node.js, multi-model routing, and API compatibility layer
+- [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard) — Local monitoring dashboard (:9190): GPU status, services, AGENDA.md, worker sub-tasks, unified security scanner
+- [secure-llm-context-vault](https://github.com/chessarisilvio/secure-llm-context-vault) — Encrypted archive for LLM context management and retrieval
+- [boot-watchdog-ai-avanzato](https://github.com/chessarisilvio/boot-watchdog-ai-avanzato) — Advanced watchdog for llama-stack: VRAM monitoring, token-rate anomaly detection, Telegram alerts, systemd auto-restart
+- [reddit-monitor](https://github.com/chessarisilvio/reddit-monitor) — Subreddit AI/tech monitor feeding ideas into AGENDA.md on 3h timer
+- [voice-dictate](https://github.com/chessarisilvio/voice-dictate) — Local Whisper turbo dictation for Claude Code via hold-to-talk (replaces built-in voice mode for Italian)
 
-            *   *Re-evaluating "AI Model Selector"*: It says "Proposte non ancora implementate". I will exclude it to be accurate to the "Technical Writer" persona using *real* data.
-            *   *Let's check "VideoStudio"*: It's in "Sviluppati". Fits Embedded/Hardware or Tools.
+## Tools & Automation
 
-    *   **GitHub Stats:** Standard standard. `chessarisilvio`.
+- [auto-vault-journal](https://github.com/chessarisilvio/auto-vault-journal) — Automatic Obsidian vault updater triggered by Claude Code Stop hook: Sonnet for vault files, freellmapi for narrative journal, 72h cleanup timer
+- [megatool](https://github.com/chessarisilvio/megatool) — OSINT toolkit in C++ with Flask web app (:7788) and AI photo analysis
+- [modulo-offline-exifgps-geotagging](https://github.com/chessarisilvio/modulo-offline-exifgps-geotagging) — Offline EXIF/GPS extraction with local reverse geocoding database
+- [videostudio](https://github.com/chessarisilvio/videostudio) — Spot AI from photos: LLM storyboard generation + Higgsfield clip assembly (:9195)
+- [bot-short](https://github.com/chessarisilvio/bot-short) — Telegram bot for AI graphics generation with SVG pipeline
+- [systemd-timer-html-minification](https://github.com/chessarisilvio/systemd-timer-html-minification) — Automated HTML minification and GitHub Pages deployment via systemd timers
 
-4.  **Refining Descriptions (Technical & Precise):**
-    *   *Nex2*: Custom GGUF low-VRAM implementation for 30B inference via quantization tuning.
-    *   *DFlash*: Custom CUDA attention kernel optimization for Tesla P40 (sm_61) in llama.cpp.
-    *   *Benchmark*: Comparative analysis of multi-agent wrapper structures on Qwen3.6-27B using llama.cpp.
-    *   *Video Input*: CMake integration and stub implementation for video frame ingestion into LLM context.
-    *   *AI Dashboard*: Local web stack for GPU telemetry, AGENDA orchestration, and unified security scanning on port 9190.
-    *   *Home Assistant*: HID dashboard built with Arduino R4 WiFi, MQTT, and Tailscale for hardware telemetry and voice command.
-    *   *Auto-Quantization*: Scripted toolchain for generating optimal GGUF quantization profiles (Q4/Q5) on heterogeneous GPUs.
-    *   *Openclaw*: Node.js gateway providing OpenAI-compatible API interfaces for local Ollama stacks.
-    *   *Auto Vault*: Obsidian automation using Claude Code hooks and LLM-based summarization for session journals.
-    *   *Voice Dictate*: Python script leveraging Whisper Turbo on GPU to replace native voice modes in Code terminals.
-    *   *Megatool*: C++ OSINT suite with Flask backend for AI-assisted photo analysis and metadata extraction.
-    *   *EXIF/GPS Module*: Offline reverse geocoding engine using local databases for privacy-preserving location tagging.
-    *   *Thermal Controller*: ESP32-based proactive fan control algorithm with real-time sensor input.
-    *   *Thermalright LCD*: HID interface for temperature data visualization and system monitoring.
+## Embedded & Hardware
 
-5.  **Formatting and Constraints Check:**
-    *   *Check lines:* Aiming for ~100 lines.
-    *   *Check slug format:* lowercase, hyphens.
-    *   *Check emojis:* Only in header.
-    *   *Check Bio:* 3 lines.
-    *   *Check Tone:* Technical, precise.
+- [ai-home-assistant-hid-dashboard](https://github.com/chessarisilvio/ai-home-assistant-hid-dashboard) — Physical dashboard with Arduino R4 WiFi + LCD showing P40/3050 status (VRAM, tok/s, uptime), ESP32 voice commands via MQTT/Tailscale
+- [ai-model-selector-physical-controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) — ESP32 rotary encoder + OLED for local AI model selection, HID/OpenClaw integration
+- [controller-termico-proattivo-esp32](https://github.com/chessarisilvio/controller-termico-proattivo-esp32) — Proactive thermal fan controller with ESP32 and sensor array
+- [digital-thermal-lcd](https://github.com/chessarisilvio/digital-thermal-lcd) — HID-based LCD temperature display for Thermalright coolers
 
-6.  **Constructing the Markdown (Mental Sandbox):**
+---
 
-    ```markdown
-    <div align="center">
-      <h1>Silvio Chessari ⚙️ 🔬</h1>
-      <!-- Bio -->
-    </div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=default&hide_title=true&hide_border=true" />
+</p>
 
-    <!-- Tech Stack Table -->
-
-    <!-- Sections -->
-
-    <!-- Stats -->
-    ```
-
-7.  **Final Polish of Slugs and Names based on prompt instructions:**
-    *   `nex2-mini-phase-twin-30b-lowvram-gguf-model` (Path provided in vault).
-    *   `dflash-kernel-attention-ottimizzato-per-p40-in-lla` (Path provided).
-    *   `benchmark-4-agent-wrappers-on-qwen3627b-llamacpp`
-    *   `add-video-input-support-to-llamacpp-mtmd`
-    *   `ai-dashboard`
-    *   `ai-home-assistant-hid-dashboard`
-    *   `auto-quantization-pipeline-gguf`
-    *   `openclaw`
-    *   `auto-vault-journal`
-    *   `voice-dictate`
-    *   `megatool`
-    *   `modulo-offline-exifgps-geotagging-per-megatool`
-    *   `controller-termico-proattivo-esp32`
-    *   `digital-thermal-lcd`
-    *   `videostudio`
-
-8.  **Writing the Content (Iterative refinement for line count):**
-    I need to ensure the descriptions are dense but fit the 1-line requirement.
-
-    *   *Bio:*
-        Specializing in LLM inference acceleration and speculative decoding strategies, enabling large model deployment on legacy CUDA hardware (sm_61).
-        Architecting self-hosted AI pipelines spanning automated GGUF quantization, custom kernel optimization, and distributed local inference.
-        Bridging high-performance compute with embedded environments via ESP32/Arduino sensor networks and HID interfaces.
-
-    *   *Stack Table:*
-        | Focus | Technologies |
-        | :--- | :--- |
-        | **Compute** | CUDA 12, Tesla P40, RTX 3050, Vulkan |
-        | **Inference** | llama.cpp, EXL2, GGUF, MoE, Speculative Decoding |
-        | **Embedded** | ESP32, Arduino R4 WiFi, MQTT, Tailscale, HID |
-        | **Automation** | Python, Systemd, Bash, Docker, Node.js |
-
-    *   *Projects:*
-        I will select the best 3-4 for each category to balance the content.
-
-        *   **LLM Research**
-            1. `nex2-mini-phase-twin-30b-lowvram-gguf-model`
-            2. `dflash-kernel-attention-ottimizzato-per-p40-in-lla`
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chessarisilvio&layout=compact&hide_title=true&hide_border=true" />
+</p>
