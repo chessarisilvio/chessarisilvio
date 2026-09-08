@@ -1,37 +1,45 @@
 # Silvio Chessari
 
-AI Infrastructure Engineer | LLM Researcher | Embedded Systems Specialist
+**AI Researcher | Embedded Systems Engineer | LLM Infrastructure Builder**
 
-**Stack:**
-| Category          | Tools/Technologies                          |
-|-------------------|---------------------------------------------|
-| **LLM Inference**  | llama.cpp, GGUF, CUDA workarounds (sm_61)    |
-| **AI Infra**      | NVIDIA Tesla P40, RTX 3050, OpenClaw gateway|
-| **Automation**    | Bash, Python, systemd, MQTT/Tailscale       |
-| **Embedded**      | ESP32, Arduino R4, HID interfaces            |
+| Stack | Tools |
+|-------|-------|
+| **AI** | llama.cpp, GGUF, Qwen, Laguna, ComfyUI, Whisper, GLM-OCR |
+| **Languages** | Python, C++, Bash, Node.js |
+| **Hardware** | NVIDIA Tesla P40, RTX 3050, ESP32, Arduino |
+| **OS** | Ubuntu, Linux Mint, Windows 11 |
+| **DevOps** | systemd, Docker, Tailscale, MQTT |
 
-## 🔬 LLM Research & Infrastructure
+## LLM Research
 
-- **mini-phase-twin-30b-low-vram-gguf** – Low-VRAM GGUF model for consumer GPUs
-- **auto-quantization-pipeline-gguf** – Automated GGUF quantization benchmarking
-- **ai-gateway-in-prod-alternative-concrete-a-litellm** – NVIDIA consumer GPU-optimized alternatives to LiteLLM
+🔬 **Benchmark Automatizzato per Quantizzazioni Locali** - Script Python per misurare tok/s su GPU P40/3050 con test di OOM risk e valutazione qualità output
 
-## 🏗️ AI Infrastructure
+🔬 **Mini Phase Twin 30B low-VRAM GGUF model** - Modello GGUF ottimizzato per inferenza low-VRAM
 
-- **ai-home-assistant-hid-dashboard** – Hardware monitoring dashboard with Arduino R4 WiFi
-- **ai-dashboard** – Local monitoring dashboard (AGENDA.md + GPU stats)
-- **add-video-input-support-to-llamacpp-mtmd** – Video input integration for llama.cpp
+🔬 **Auto-Quantization Pipeline GGUF** - Pipeline per benchmark e quantizzazione automatica di nuovi checkpoint LLM
 
-## 🛠️ Tools & Automation
+## AI Infrastructure
 
-- **auto-vault-journal** – Automated Obsidian vault updates via Claude Code hooks
-- **dictate-whisper-local** – Local Whisper dettatura for Claude Code
-- **ai-model-selector-physical-controller** – ESP32-based AI model selector
+🏗️ **AI Dashboard + Agenda** - Dashboard web con pannelli GPU, servizi, sistema, agenda e generatore idee
 
-## 💡 Embedded & Hardware
+🏗️ **AI Gateway in prod: alternative concrete a LiteLLM** - Analisi di alternative a LiteLLM per stack hardware NVIDIA consumer
 
-- **ai-influencer-pipeline** – Social media content generation with LoRA face-consistency
-- **barocco-digital-website** – Agency website (Astro+Tailwind, Cloudflare Pages)
-- **3d-procedural-pipeline** – Local Blender procedural asset generation
+🏗️ **AI Home Assistant HID Dashboard** - Interfaccia fisica con Arduino R4 WiFi per monitoraggio e comandi vocali
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=silviochessari&show_icons=true&theme=dark)
+## Tools & Automation
+
+🛠️ **AI Influencer "Aria" — pipeline di pubblicazione social** - Pipeline per generazione e pubblicazione di contenuti social con LoRA face-consistency
+
+🛠️ **AI Model Selector Physical Controller** - Controller fisico ESP32 per selezione modelli AI locali
+
+🛠️ **Auto Vault Journal** - Sistema di aggiornamento automatico del vault Obsidian a fine sessione
+
+## Embedded & Hardware
+
+💻 **Sorveglianza Raspberry Pi** - Pipeline webcam per monitoraggio locale
+
+💻 **LCD Thermalright PA120 Digital** - Fix per display LCD digitale con HID protocol
+
+💻 **esphumidity** - Fix per sensore di umidità con display OLED
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=dark)
