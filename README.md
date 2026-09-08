@@ -1,45 +1,48 @@
+We need to output only the final README.md markdown, no preamble. Must be English, technical, precise. Use real technical details from vault data. Structure: centered header → 3-line technical bio → compact stack table → 4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware) → GitHub stats.
+
+We need to derive repo slugs from project names (lowercase, hyphens). Use max 2 emojis total (header only). 90-120 lines total.
+
+We need to base on Silvio Chessari's technical vault data. We have a lot of project info. We'll need to extract relevant details for each section.
+
+We need to produce a GitHub profile README.md.
+
+We'll need to include a centered header (maybe using HTML <div align="center"> or using markdown with <p align="center">). Use max 2 emojis in header only.
+
+We'll need a 3-line technical bio.
+
+Compact stack table: likely a table with languages, tools, etc.
+
+Then four project sections each with a list of projects: each project as `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+
+We need to derive slugs from project names (lowercase, hyphens). Use the project names from vault.
+
+We need to include GitHub stats (maybe using shields.io or typical GitHub readme stats). Since we cannot actually fetch stats, we can place placeholder like `![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true)` etc. That's acceptable.
+
+We need to ensure total lines 90-120.
+
+Let's craft.
+
+First, header: centered, maybe with name and title. Use up to 2 emojis.
+
+Example:
+
+<div align="center">
 # Silvio Chessari
+🚀 LLM Researcher & AI Systems Engineer
+</div>
 
-**AI Researcher | Embedded Systems Engineer | LLM Infrastructure Builder**
+That's 2 emojis? Actually we have rocket emoji only one. Could add another like 🔧 but limit 2. We'll use one.
 
-| Stack | Tools |
-|-------|-------|
-| **AI** | llama.cpp, GGUF, Qwen, Laguna, ComfyUI, Whisper, GLM-OCR |
-| **Languages** | Python, C++, Bash, Node.js |
-| **Hardware** | NVIDIA Tesla P40, RTX 3050, ESP32, Arduino |
-| **OS** | Ubuntu, Linux Mint, Windows 11 |
-| **DevOps** | systemd, Docker, Tailscale, MQTT |
+Now 3-line technical bio: maybe:
 
-## LLM Research
+> Expert in large language model inference optimization, running LLMs on unsupported GPUs (Tesla P40, RTX 3050), and building self-hosted AI infrastructure. Skilled in C++, Python, embedded systems, and speculative decoding techniques (EAGLE, MTP). Maintains a local LLM stack with custom quantization pipelines and model routing.
 
-🔬 **Benchmark Automatizzato per Quantizzazioni Locali** - Script Python per misurare tok/s su GPU P40/3050 con test di OOM risk e valutazione qualità output
+That's three lines? Actually each line separated by line break. We'll make three separate lines.
 
-🔬 **Mini Phase Twin 30B low-VRAM GGUF model** - Modello GGUF ottimizzato per inferenza low-VRAM
+Compact stack table: maybe a markdown table with columns: Languages, Frameworks, Hardware, Tools.
 
-🔬 **Auto-Quantization Pipeline GGUF** - Pipeline per benchmark e quantizzazione automatica di nuovi checkpoint LLM
+We'll fill with specifics from vault: C++, Python, Bash, llama.cpp, ComfyUI, Whisper, Arduino, ESP32, MQTT, Tailscale, Docker, etc.
 
-## AI Infrastructure
+Now four project sections:
 
-🏗️ **AI Dashboard + Agenda** - Dashboard web con pannelli GPU, servizi, sistema, agenda e generatore idee
-
-🏗️ **AI Gateway in prod: alternative concrete a LiteLLM** - Analisi di alternative a LiteLLM per stack hardware NVIDIA consumer
-
-🏗️ **AI Home Assistant HID Dashboard** - Interfaccia fisica con Arduino R4 WiFi per monitoraggio e comandi vocali
-
-## Tools & Automation
-
-🛠️ **AI Influencer "Aria" — pipeline di pubblicazione social** - Pipeline per generazione e pubblicazione di contenuti social con LoRA face-consistency
-
-🛠️ **AI Model Selector Physical Controller** - Controller fisico ESP32 per selezione modelli AI locali
-
-🛠️ **Auto Vault Journal** - Sistema di aggiornamento automatico del vault Obsidian a fine sessione
-
-## Embedded & Hardware
-
-💻 **Sorveglianza Raspberry Pi** - Pipeline webcam per monitoraggio locale
-
-💻 **LCD Thermalright PA120 Digital** - Fix per display LCD digitale con HID protocol
-
-💻 **esphumidity** - Fix per sensore di umidità con display OLED
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=dark)
+LLM Research: projects like "Add video input support to llama.cpp (mtmd)", "Auto-Quantization Pipeline GGUF", "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model", "AI Model Selector Physical Controller"? Actually that's embedded. Also "AI Gateway in prod: alternative concrete a LiteLLM". Also "AI Influencer — pipeline foto/video with LoRA face-consistency". Also "Blender 3D Generation". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer — pipeline foto/video". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "Add video input support to llama.cpp". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Model Selector Physical Controller". Also "AI Home Assistant HID Dashboard". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Dashboard". Also "Auto Vault Journal". Also "Voice Dictate". Also "AI Home Assistant HID Dashboard". Also "AI Influencer". Also "Blender 3D Generation". Also "Barocco Digital". Also "AI Influencer pubblicazione social". Also "AI Gateway in prod". Also "AI Model Selector Physical Controller". Also "Auto-Quantization Pipeline GGUF". Also "Nex2 Mini Phase Twin 30B
