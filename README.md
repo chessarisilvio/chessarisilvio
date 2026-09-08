@@ -2,34 +2,36 @@
 
 AI Infrastructure Engineer | LLM Researcher | Embedded Systems Specialist
 
-| **Stack**       | **Technologies**                                                                 |
-|------------------|---------------------------------------------------------------------------------|
-| **LLM**          | llama.cpp, GGUF, Qwen3.5, LoRA, MoE routing, low-VRAM optimization              |
-| **Infrastructure** | NVIDIA Tesla P40 (sm_61), RTX 3050, CUDA workarounds, Docker, Tailscale          |
-| **Embedded**     | ESP32, Arduino R4 WiFi, MQTT, HID, OpenClaw gateway                             |
-| **Automation**   | Bash pipelines, systemd, Playwright, Obsidian vault hooks                       |
+**Stack:**
+| Category          | Tools/Technologies                          |
+|-------------------|---------------------------------------------|
+| **LLM Inference**  | llama.cpp, GGUF, CUDA workarounds (sm_61)    |
+| **AI Infra**      | NVIDIA Tesla P40, RTX 3050, OpenClaw gateway|
+| **Automation**    | Bash, Python, systemd, MQTT/Tailscale       |
+| **Embedded**      | ESP32, Arduino R4, HID interfaces            |
 
-## 🔬 LLM Research & Development
+## 🔬 LLM Research & Infrastructure
 
-- **mini-phase-twin-30b-low-vram-gguf** – Low-VRAM GGUF model for consumer GPUs (Tesla P40)
-- **auto-quantization-pipeline-gguf** – Automated benchmarking and quantization for Q4_K_M/Q5_K_S
-- **4-agent-wrappers-on-qwen3.6-27b** – Multi-agent routing and inference optimization
+- **mini-phase-twin-30b-low-vram-gguf** – Low-VRAM GGUF model for consumer GPUs
+- **auto-quantization-pipeline-gguf** – Automated GGUF quantization benchmarking
+- **ai-gateway-in-prod-alternative-concrete-a-litellm** – NVIDIA consumer GPU-optimized alternatives to LiteLLM
 
 ## 🏗️ AI Infrastructure
 
-- **ai-gateway-in-prod-alternative-concrete-a-litellm** – OpenAI-compatible gateway for NVIDIA consumer hardware
-- **ai-home-assistant-hid-dashboard** – Physical dashboard for local AI stack monitoring
-- **ai-model-selector-physical-controller** – ESP32-based model selection interface
+- **ai-home-assistant-hid-dashboard** – Hardware monitoring dashboard with Arduino R4 WiFi
+- **ai-dashboard** – Local monitoring dashboard (AGENDA.md + GPU stats)
+- **add-video-input-support-to-llamacpp-mtmd** – Video input integration for llama.cpp
 
 ## 🛠️ Tools & Automation
 
-- **auto-vault-journal** – Obsidian vault auto-update via Claude Code hooks
-- **dictate** – Local Whisper dettatura for Claude Code (Italian support)
-- **add-video-input-support-to-llamacpp-mtmd** – Video frame acquisition for LLM inference
+- **auto-vault-journal** – Automated Obsidian vault updates via Claude Code hooks
+- **dictate-whisper-local** – Local Whisper dettatura for Claude Code
+- **ai-model-selector-physical-controller** – ESP32-based AI model selector
 
 ## 💡 Embedded & Hardware
 
-- **ai-influencer-pubblicazione-social** – Social media pipeline with LoRA face-consistency
-- **ai-dashboard** – Web dashboard for GPU monitoring and task automation
+- **ai-influencer-pipeline** – Social media content generation with LoRA face-consistency
+- **barocco-digital-website** – Agency website (Astro+Tailwind, Cloudflare Pages)
+- **3d-procedural-pipeline** – Local Blender procedural asset generation
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=silviochessari&show_icons=true&theme=dark)
