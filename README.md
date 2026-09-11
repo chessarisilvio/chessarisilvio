@@ -1,173 +1,183 @@
-We need to output only the final README.md markdown, no preamble. Must be English, technical, precise, no fluff. Show real technical depth: LLM inference research (EAGLE/MTP/speculative decoding/MoE routing), running LLMs on unsupported consumer/datacenter GPUs (Tesla P40 sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
+We need to output only README.md, no preamble. Structure: centered header → 3-line technical bio → compact stack table → 4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware) → GitHub stats.
 
-Structure: centered header → 3-line technical bio → compact stack table → 4 project sections (LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware) → GitHub stats.
+We need to use real technical details from vault. Must include LLM inference research (EAGLE/MTP/speculative decoding/MoE routing), running LLMs on unsupported consumer/datacenter GPUs (Tesla P40 sm_61, CUDA workarounds), self-built AI infrastructure, embedded systems.
 
-For each project: `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+Need project entries: each project: [name](https://github.com/chessarisilvio/slug) + 1-line technical description. Use repo slugs derived from project names (lowercase, hyphens).
 
-Use repo slugs derived from project names (lowercase, hyphens).
+We need max 2 emojis total (header only). So we can include maybe a rocket or star in header. Rest must be clean technical prose.
 
-Max 2 emojis total (header only), rest is clean technical prose.
+90-120 lines total.
 
-90–120 lines total.
+We need to produce final markdown.
 
-We need to base on vault data. We have a lot of project names. Need to pick representative projects for each section.
+We'll need to infer some projects from vault. There are many project names; we need to choose some for each section.
 
-We need to produce a GitHub profile README.md for Silvio Chessari.
+We need to include centered header: maybe using HTML <div align="center"> or using markdown centered? Usually you can use <p align="center">. We'll do:
 
-We need to include a centered header (maybe using HTML <div align="center"> or using markdown with <p align="center">). Use max 2 emojis in header only.
+<div align="center">
+# Silvio Chessari
+...
+</div>
+
+But header only can have max 2 emojis; we can put maybe 🚀 and 🔧.
 
 Then 3-line technical bio: short lines.
 
-Then compact stack table: maybe a markdown table with columns: Language, Framework, Tools.
+Compact stack table: maybe a markdown table with two columns: Language, Tools etc.
 
-Then 4 project sections each with heading and list of projects.
+Then sections: each with heading and list of projects.
 
-Then GitHub stats: maybe using shields.io or just plain text.
+Finally GitHub stats: maybe using shields.io or just plain text: GitHub Stats: ... We'll just put something like:
 
-We need to keep lines 90-120.
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chessarisilvio&show_icons=true&theme=dark) but that's an image, not emoji; but it's okay? The restriction only about emojis, not images. Probably fine.
 
-We must not include any extra text outside the markdown.
+But we need to keep within 90-120 lines. We'll aim around 100 lines.
+
+We need to derive slugs: lower case, hyphens.
+
+We'll need to pick projects from vault that match categories:
+
+LLM Research: add-video-input-support-to-llamacpp-mtmd, auto-quantization-pipeline-gguf, auto-tuning-dinamico-per-gemma-4-26b-su-p40, ai-model-selector-physical-controller? maybe more research: maybe speculative decoding? Not in vault but we can mention EAGLE/MTP etc from research. However we need to show real technical depth from vault data; we can mention that he researched EAGLE/MTP etc. But we need to reference actual projects? Could include a project named "llm-research-eagle-mtp" but not in vault. Might be okay if we infer from research tag? There's a folder "ricerca/" in taxonomy. But we don't have specific project names. We could still list a project like "llm-research-eagle-mtp" with slug. But we need to ensure it's derived from project names (lowercase, hyphens). Since we don't have explicit name, maybe we should not invent. Better to stick to actual listed projects.
+
+Thus LLM Research section can include projects like "add-video-input-support-to-llamacpp-mtmd", "auto-quantization-pipeline-gguf", "auto-tuning-dinamico-per-gemma-4-26b-su-p40", maybe "ai-model-selector-physical-controller" (though that's more hardware). Also "ai-gateway-in-prod-alternative-concrete-a-litellm" maybe infrastructure.
+
+AI Infrastructure: llm-stack (mentioned in taxonomy), ai-home-assistant-hid-dashboard, ai-dashboard, maybe ai-gateway-in-prod-alternative-concrete-a-litellm.
+
+Tools & Automation: auto-vault-journal, voice-dictate, blender-3d-generation? maybe that's more creative. Also barocco-digital (website). Also ai-influencer.
+
+Embedded & Hardware: ai-home-assistant-hid-dashboard (also embedded), ai-model-selector-physical-controller, voice-dictate? maybe not. Also maybe "blender-3d-generation" not embedded. We'll put hardware.
+
+We need to keep each project entry as "[name](https://github.com/chessarisilvio/slug)" plus one-line description.
+
+We need to ensure we don't exceed emojis: only header can have up to 2 emojis.
 
 Let's craft.
 
-First, header: maybe:
+First line: maybe:
 
-```markdown
 <div align="center">
-# Silvio Chessari
-</div>
-```
+# Silvio Chessari 🚀🔧
+...
 
-But need max 2 emojis in header only. Could add maybe a computer and a gear emoji? But we can avoid emojis to be safe. Use none.
+But that's 2 emojis.
 
-But requirement: max 2 emojis total (header only). So we can have zero.
+Then bio lines: maybe three lines:
 
-We'll do:
-
-```markdown
-<div align="center>
-# Silvio Chessari
-</div>
-```
-
-But need correct syntax: `<div align="center">`.
-
-Now 3-line technical bio: maybe:
-
-```
-LLM inference researcher | AI systems builder | Embedded hardware engineer
-Focus: speculative decoding, MoE routing, GPU kernel tuning for legacy NVIDIA architectures
-Self-hosted LLM stack on Tesla P40 (sm_61) & RTX 3050, Arduino/R4 WiFi, ESP32 HID controllers
-```
+> LLM inference researcher | AI systems engineer | Embedded hardware tinkerer  
+> Specialize in EAGLE/MTP speculative decoding, MoE routing, and running LLMs on Tesla P40 (sm_61) via CUDA workarounds  
+> Builder of self‑hosted AI infrastructure on consumer GPUs and open‑source toolchains
 
 That's three lines.
 
-Now compact stack table: maybe a table with two columns: Category and Technologies.
+Then compact stack table: maybe a table with Languages, Frameworks, Hardware.
 
 We'll do:
 
-```
-| Category | Technologies |
-|----------|--------------|
+| Category | Tech |
+|----------|------|
 | Languages | C++, Python, Rust, Bash |
-| Frameworks | llama.cpp, TensorRT-LLM, PyTorch, ComfyUI |
-| GPU/Accelerators | Tesla P40 (CUDA 11.8, sm_61), RTX 3050 (CUDA 12.x) |
-| Embedded | Arduino R4 WiFi, ESP32, ESP-IDF, PlatformIO |
-| Tools | Docker, systemd, MQTT/Tailscale, Obsidian vault, GitHub Actions |
-```
+| Frameworks | llama.cpp, ComfyUI, Astro, Tailwind, MQTT, Tailscale |
+| Hardware | NVIDIA Tesla P40 (sm_61), RTX 3050, Arduino R4 WiFi, ESP32, GGUF quantized models |
 
-That's maybe 6 rows.
+That's a compact table.
 
-Now sections:
+Now sections.
 
-### LLM Research
-List projects: from vault: "Add video input support to llama.cpp (mtmd)", "AI Gateway in prod: alternative concrete a LiteLLM", "Auto-Quantization Pipeline GGUF", "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model", maybe "AI Model Selector Physical Controller" (though that's embedded). Also "AI Influencer" is more media.
+We'll need to create headings: maybe `## LLM Research`, etc.
 
-We'll pick 4-5 projects per section? Probably each section list a few.
+Under each heading, list items like:
 
-We need to output each as `[name](https://github.com/chessarisilvio/slug)` + 1-line technical description.
+- [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) – Enables webcam/video frame ingestion for llama.cpp inference pipelines.
 
-We need to derive slugs: lowercase, hyphens.
+We need to ensure slug matches project name lowercased with hyphens. The project name as given: "add-video-input-support-to-llamacpp-mtmd" already matches. Good.
 
-Examples:
+Similarly "auto-quantization-pipeline-gguf".
 
-- "Add video input support to llama.cpp (mtmd)" -> slug: `add-video-input-support-to-llamacpp-mtmd`
-- "AI Gateway in prod: alternative concrete a LiteLLM" -> slug: `ai-gateway-in-prod-alternative-concrete-a-litellm`
-- "Auto-Quantization Pipeline GGUF" -> slug: `auto-quantization-pipeline-gguf`
-- "Nex2 Mini Phase Twin 30B low‑VRAM GGUF model" -> slug: `nex2-mini-phase-twin-30b-lowvram-gguf-model`
-- "AI Model Selector Physical Controller" -> slug: `ai-model-selector-physical-controller`
-- "AI Dashboard" -> slug: `ai-dashboard`
-- "AI Home Assistant HID Dashboard" -> slug: `ai-home-assistant-hid-dashboard`
-- "Voice Dictate — dettatura locale Whisper per Claude Code" -> slug: `voice-dictate-dettatura-locale-whisper-per-claude-code` maybe too long; we can shorten: `voice-dictate-whisper-claude`
-- "Auto Vault Journal" -> slug: `auto-vault-journal`
-- "Blender 3D Generation" -> slug: `blender-3d-generation`
-- "Barocco Digital" -> slug: `barocco-digital`
-- "AI Influencer" -> slug: `ai-influencer`
+"auto-tuning-dinamico-per-gemma-4-26b-su-p40" (note includes accent? we keep as is but slug should be lowercase hyphens; it's already lower case and hyphens, but includes accent? Actually "dinamico" no accent, "per", "gemma-4-26b-su-p40". It's fine.
 
-We need to keep lines count 90-120. Let's estimate.
+"ai-model-selector-physical-controller".
 
-We'll produce sections with maybe 3-4 projects each.
+"ai-home-assistant-hid-dashboard".
 
-Now GitHub stats: maybe a line with shields or plain text: `GitHub: @chessarisilvio | Public repos: 27 | Followers: 12` etc. But we don't have actual numbers; we can approximate or leave generic? Should be based on vault? Not provided. We can just put placeholder like `GitHub: @chessarisilvio` and maybe a line with `📊` but that's emoji; we can avoid emojis. Use plain text.
+"ai-dashboard".
 
-We need to keep total lines 90-120. Let's draft and count.
+"ai-gateway-in-prod-alternative-concrete-a-litellm".
 
-We'll write markdown.
+"blender-3d-generation".
 
-Let's start constructing.
+"barocco-digital".
 
-Line count includes empty lines? Usually yes. We'll aim for about 100 lines.
+"ai-influencer".
 
-We'll write:
+"auto-vault-journal".
 
-```
-<div align="center">
-# Silvio Chessari
-</div>
+"voice-dictate".
 
-LLM inference researcher | AI systems builder | Embedded hardware engineer
-Focus: speculative decoding, MoE routing, GPU kernel tuning for legacy NVIDIA architectures
-Self-hosted LLM stack on Tesla P40 (sm_61) & RTX 3050, Arduino/R4 WiFi, ESP32 HID controllers
+We need to allocate to sections.
 
-| Category | Technologies |
-|----------|--------------|
-| Languages | C++, Python, Rust, Bash |
-| Frameworks | llama.cpp, TensorRT-LLM, PyTorch, ComfyUI |
-| GPU/Accelerators | Tesla P40 (CUDA 11.8, sm_61), RTX 3050 (CUDA 12.x) |
-| Embedded | Arduino R4 WiFi, ESP32, ESP-IDF, PlatformIO |
-| Tools | Docker, systemd, MQTT/Tailscale, Obsidian vault, GitHub Actions |
+Let's decide:
 
-## LLM Research
-- [add-video-input-support-to-llamacpp-mtmd](https://github.com/chessarisilvio/add-video-input-support-to-llamacpp-mtmd) – Enables real‑time video frame ingestion for llama.cpp inference pipelines.
-- [ai-gateway-in-prod-alternative-concrete-a-litellm](https://github.com/chessarisilvio/ai-gateway-in-prod-alternative-concrete-a-litellm) – Comparative study of LiteLLM alternatives for local OpenAI‑compatible routing on P40/3050.
-- [auto-quantization-pipeline-gguf](https://github.com/chessarisilvio/auto-quantization-pipeline-gguf) – Automated GGUF quantization benchmarking Q4_K_M vs Q5_K_S on Tesla P40.
-- [nex2-mini-phase-twin-30b-lowvram-gguf-model](https://github.com/chessarisilvio/nex2-mini-phase-twin-30b-lowvram-gguf-model) – Low‑VRAM GGUF port of Nex2 Mini Phase Twin 30B for 24 GB P40.
+LLM Research:
+- add-video-input-support-to-llamacpp-mtmd
+- auto-quantization-pipeline-gguf
+- auto-tuning-dinamico-per-gemma-4-26b-su-p40
+- ai-model-selector-physical-controller (maybe borderline but okay)
 
-## AI Infrastructure
-- [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard) – Web UI at :9190 monitoring GPU, services, agenda and security scans.
-- [ai-home-assistant-hid-dashboard](https://github.com/chessarisilvio/ai-home-assistant-hid-dashboard) – Arduino R4 WiFi + ESP32 HID dashboard showing VRAM, tok/s, uptime via MQTT/Tailscale.
-- [auto-vault-journal](https://github.com/chessarisilvio/auto-vault-journal) – Hook‑driven Obsidian vault updater and session journal for Claude Code.
-- [voice-dictate-whisper-claude](https://github.com/chessarisilvio/voice-dictate-whisper-claude) – Space‑bar Whisper turbo GPU dictation plug‑in for Claude Code terminal.
+AI Infrastructure:
+- llm-stack (not a specific repo? but we can infer slug "llm-stack")
+- ai-home-assistant-hid-dashboard
+- ai-dashboard
+- ai-gateway-in-prod-alternative-concrete-a-litellm
 
-## Tools & Automation
-- [blender-3d-generation](https://github.com/chessarisilvio/blender-3d-generation) – Procedural asset pipeline on RTX 3050 using CC0 models and HDRI lighting.
-- [barocco-digital](https://github.com/chessarisilvio/barocco-digital) – Astro+Tailwind v4 agency site with Cloudflare Pages deploy and accessibility audit.
-- [ai-influencer](https://github.com/chessarisilvio/ai-influencer) – LoRA‑tuned SDXL pipeline for consistent face generation (character “Aria”).
-- [ai-model-selector-physical-controller](https://github.com/chessarisilvio/ai-model-selector-physical-controller) – ESP32 rotary encoder + OLED HID controller for local model switching.
+Tools & Automation:
+- auto-vault-journal
+- voice-dictate
+- blender-3d-generation
+- barocco-digital
 
-## Embedded & Hardware
-- [ai-home-assistant-hid-dashboard](https://github.com/chessarisilvio/ai-home-assistant-hid-dashboard) – Duplicate? Already listed; maybe move to Embedded & Hardware only. Let's adjust: we can have it only in Embedded & Hardware, and remove from AI Infrastructure. Let's restructure.
+Embedded & Hardware:
+- ai-home-assistant-hid-dashboard (already used) maybe move to embedded; but we can't duplicate. Let's decide: AI Infrastructure includes llm-stack, ai-dashboard, ai-gateway... Embedded & Hardware includes ai-home-assistant-hid-dashboard, ai-model-selector-physical-controller (maybe), voice-dictate? Actually voice-dictate is a tool. We'll keep embedded separate.
 
-We need 4 sections: LLM Research, AI Infrastructure, Tools & Automation, Embedded & Hardware.
+We need 4 sections exactly: LLM Research / AI Infrastructure / Tools & Automation / Embedded & Hardware.
 
-We'll move the dashboard to Embedded & Hardware.
+Thus allocate:
 
-Let's recraft sections.
+LLM Research: as above.
 
-### LLM Research (as above)
+AI Infrastructure: llm-stack, ai-dashboard, ai-gateway-in-prod-alternative-concrete-a-litellm, maybe ai-home-assistant-hid-dashboard? but that is more embedded. Let's put ai-home-assistant-hid-dashboard in Embedded & Hardware.
 
-### AI Infrastructure
-- [ai-dashboard](https://github.com/chessarisilvio/ai-dashboard) – Web UI at :9190 monitoring GPU, services, agenda and security scans.
-- [auto-vault-journal](https://github.com/chessarisilvio/auto-vault-journal) – Hook‑driven Obsidian vault updater and session journal for Claude Code.
-- [voice-dictate-whisper-claude](https://github.com/chessarisilvio/voice-dictate-whisper-claude) – Space‑bar Whisper turbo GPU dictation plug‑in for Claude Code terminal.
-- [ai-gateway-in
+Thus AI Infrastructure: llm-stack, ai-dashboard, ai-gateway-in-prod-alternative-concrete-a-litellm, maybe something else like "ai-influencer"? No that's tools. We'll just have three? Need maybe four items each section? Not required but we can have variable.
+
+Tools & Automation: auto-vault-journal, voice-dictate, blender-3d-generation, barocco-digital, ai-influencer.
+
+Embedded & Hardware: ai-home-assistant-hid-dashboard, ai-model-selector-physical-controller, maybe also something like "blender-3d-generation"? No.
+
+We need to ensure each project appears only once.
+
+Let's list all projects we will include:
+
+LLM Research:
+- add-video-input-support-to-llamacpp-mtmd
+- auto-quantization-pipeline-gguf
+- auto-tuning-dinamico-per-gemma-4-26b-su-p40
+- ai-model-selector-physical-controller (maybe but it's hardware; maybe move to embedded. Let's keep it in embedded.)
+
+Better: LLM Research: add-video-input-support-to-llamacpp-mtmd, auto-quantization-pipeline-gguf, auto-tuning-dinamico-per-gemma-4-26b-su-p40.
+
+AI Infrastructure: llm-stack, ai-dashboard, ai-gateway-in-prod-alternative-concrete-a-litellm.
+
+Tools & Automation: auto-vault-journal, voice-dictate, blender-3d-generation, barocco-digital, ai-influencer.
+
+Embedded & Hardware: ai-home-assistant-hid-dashboard, ai-model-selector-physical-controller.
+
+That covers all.
+
+Now we need to ensure we have real technical details from vault for each description.
+
+Let's extract details:
+
+- add-video-input-support-to-llamacpp-mtmd: from vault: "Add video input support to llama.cpp (mtmd)". Objective: adding video input support to llama.cpp, enabling acquisition of frames from webcam or video file and sending to server for LLM inference. Provides CMake modifications, stub of video input, example Python script.
+
+- auto-quantization-pipeline-gguf: pipeline to download new LLM checkpoints, run benchmarks on local hardware (Tesla P40 and RTX 3050), evaluate best GGUF quantization point (Q4_K_M vs Q5_K_S), generate GGUF files ready for production, update vault docs.
+
+- auto-tuning-dinamico-per-gemma-4-26b-su-p40: tool for dynamic auto-tuning monitoring VRAM and CPU of Tesla P40 during Gemma-4-26B-A4B-heretic execution, adapting GPU_LAYERS, CTX_SIZE, batch size to maximize throughput without OOM. Includes monitor module src/monitor.py collecting
